@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { data } from '@/database/data';
 import { Search } from '@/components/Search';
 import { Filter } from '@/components/Filter';
 import { TodoForm } from '@/components/TodoForm';
@@ -6,26 +7,7 @@ import { TodoList } from '@/components/TodoList';
 import './App.css';
 
 const App = () => {
-  const [todos, setTodos] = useState([
-    {
-      id: 1,
-      text: 'Criar funcionalidade X no sistema',
-      category: 'Trabalho',
-      isCompleted: false,
-    },
-    {
-      id: 2,
-      text: 'Ir para a academia',
-      category: 'Pessoal',
-      isCompleted: false,
-    },
-    {
-      id: 3,
-      text: 'Estudar React',
-      category: 'Estudos',
-      isCompleted: false,
-    },
-  ]);
+  const [todos, setTodos] = useState(data);
   const [search, setSearch] = useState('');
   const [filter, setFilter] = useState('All');
   const [sort, setSort] = useState('Asc');

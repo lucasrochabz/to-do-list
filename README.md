@@ -1,4 +1,4 @@
-# react-vite-template
+# to-do-list
 
 - React + Vite
 - Estrutura de pastas escalável
@@ -9,11 +9,6 @@
 - Suporte a módulos CSS
 - Importações de alias configuradas
 
-### Fix
-
-- add react router
-- add about page
-
 ### Estrutura do projeto
 
 ```bash
@@ -22,10 +17,11 @@ react-vite-template/
 ├── src/
 │   ├── assets/
 │   ├── components/
-│   │   └── Header/
-│   │       ├── Header.jsx
-│   │       ├── Header.module.css
-│   │       └── index.js
+│   │   ├── Filter/
+│   │   ├── Search/
+│   │   ├── Todo/
+│   │   ├── TodoForm/
+│   │   └── TodoList/
 │   │
 │   ├── contexts/
 │   ├── hooks/
@@ -37,6 +33,7 @@ react-vite-template/
 │   │
 │   ├── routes/
 │   ├── styles/
+│   ├── App.css
 │   ├── App.jsx
 │   └── main.jsx
 │
