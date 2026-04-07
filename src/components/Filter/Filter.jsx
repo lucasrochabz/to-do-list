@@ -1,11 +1,11 @@
-import './Filter.css';
+import styles from './Filter.module.css';
 
 const Filter = ({ filter, setFilter, setSort }) => {
   return (
-    <section className="filter">
+    <section className={styles.filter}>
       <h2>Filtrar:</h2>
 
-      <div className="filter-options">
+      <div className={styles.filterOptions}>
         <div>
           <p>Status:</p>
 

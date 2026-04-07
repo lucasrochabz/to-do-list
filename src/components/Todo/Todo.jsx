@@ -1,9 +1,9 @@
-import './Todo.css';
+import styles from './Todo.module.css';
 
 const Todo = ({ todo, completeTodo, removeTodo }) => {
   return (
     <div
-      className="todo"
+      className={styles.todo}
       style={{ textDecoration: todo.isCompleted ? 'line-through' : 'none' }}
     >
       <div className="content">
@@ -11,12 +11,15 @@ const Todo = ({ todo, completeTodo, removeTodo }) => {
         <p className="category">({todo.category})</p>
       </div>
 
-      <div className="buttons">
-        <button className="complete" onClick={() => completeTodo(todo.id)}>
+      <div className={styles.buttons}>
+        <button
+          className={styles.complete}
+          onClick={() => completeTodo(todo.id)}
+        >
           Completar
         </button>
 
-        <button className="remove" onClick={() => removeTodo(todo.id)}>
+        <button className={styles.remove} onClick={() => removeTodo(todo.id)}>
           X
         </button>
       </div>
