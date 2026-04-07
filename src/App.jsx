@@ -44,6 +44,7 @@ const App = () => {
   return (
     <main className="app">
       <h1>Lista de tarefas</h1>
+      <TodoForm addTodo={addTodo} />
 
       <Search search={search} setSearch={setSearch} />
       <Filter filter={filter} setFilter={setFilter} setSort={setSort} />
@@ -55,8 +56,6 @@ const App = () => {
         filter={filter}
         sort={sort}
       />
-
-      <TodoForm addTodo={addTodo} />
     </main>
   );
 };
