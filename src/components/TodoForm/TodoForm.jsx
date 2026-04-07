@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import styles from './TodoForm.module.css';
 
 const TodoForm = ({ addTodo }) => {
   const [value, setValue] = useState('');
@@ -15,9 +16,9 @@ const TodoForm = ({ addTodo }) => {
   };
 
   return (
-    <section>
+    <section className={styles.todoForm}>
       <h2>Criar Tarefa</h2>
-      <form onSubmit={handleSubmit}>
+      <form className={styles.form} onSubmit={handleSubmit}>
         <input
           type="text"
           placeholder="Digite o título"

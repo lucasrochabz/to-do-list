@@ -13,3 +13,11 @@
 .filterOptions div {
   flex: 1 1 0;
 }
+
+.sortOptions {
+  display: flex;
+  gap: 0.5rem;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+}
