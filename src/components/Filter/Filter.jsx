@@ -1,6 +1,8 @@
+import './Filter.css';
+
 const Filter = ({ filter, setFilter, setSort }) => {
   return (
-    <div className="filter">
+    <section className="filter">
       <h2>Filtrar:</h2>
 
       <div className="filter-options">
@@ -21,7 +23,7 @@ const Filter = ({ filter, setFilter, setSort }) => {
           <button onClick={() => setSort('Desc')}>Decrescente</button>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

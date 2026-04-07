@@ -1,0 +1,15 @@
+.filter {
+  border-bottom: 1px solid #555;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+
+.filter-options {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.filter-options div {
+  flex: 1 1 0;
+}

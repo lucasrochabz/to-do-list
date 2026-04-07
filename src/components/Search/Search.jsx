@@ -1,6 +1,8 @@
+import './Search.css';
+
 const Search = ({ search, setSearch }) => {
   return (
-    <div className="search">
+    <section className="search">
       <h2>Pesquisar:</h2>
       <input
         type="text"
@@ -8,7 +10,7 @@ const Search = ({ search, setSearch }) => {
         placeholder="Digite para pesquisar..."
         onChange={(e) => setSearch(e.target.value)}
       />
-    </div>
+    </section>
   );
 };
 
