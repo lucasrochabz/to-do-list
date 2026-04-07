@@ -15,7 +15,7 @@ const TodoForm = ({ addTodo }) => {
   };
 
   return (
-    <div>
+    <section>
       <h2>Criar Tarefa</h2>
       <form onSubmit={handleSubmit}>
         <input
@@ -34,7 +34,7 @@ const TodoForm = ({ addTodo }) => {
 
         <button>Criar tarefa</button>
       </form>
-    </div>
+    </section>
   );
 };
 
