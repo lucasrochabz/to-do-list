@@ -3,22 +3,18 @@ import styles from './TodoForm.module.css';
 
 const TodoForm = ({ addTodo }) => {
   const [value, setValue] = useState('');
-  const [category, setCategory] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if (!value || !category) return;
+    if (!value) return;
 
-    addTodo(value, category);
+    addTodo(value);
     setValue('');
-    setCategory('');
   };
 
   return (
     <section className={styles.todoForm}>
-      <h2>Criar Tarefa</h2>
-
       <form className={styles.form} onSubmit={handleSubmit}>
         <div className={styles.group}>
           <input
@@ -28,17 +24,6 @@ const TodoForm = ({ addTodo }) => {
             value={value}
             onChange={(e) => setValue(e.target.value)}
           />
-
-          <select
-            id="category"
-            value={category}
-            onChange={(e) => setCategory(e.target.value)}
-          >
-            <option value="">Selecione uma categoria</option>
-            <option value="Trabalho">Trabalho</option>
-            <option value="Pessoal">Pessoal</option>
-            <option value="Estudos">Estudos</option>
-          </select>
         </div>
 
         <button type="submit">+ Add</button>

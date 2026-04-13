@@ -10,7 +10,6 @@ const Todo = ({ todo, completeTodo, removeTodo }) => {
     >
       <div className="content">
         <p>{todo.text}</p>
-        <p className="category">({todo.category})</p>
       </div>
 
       <div className={styles.buttons}>

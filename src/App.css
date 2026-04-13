@@ -2,7 +2,7 @@
   max-width: 600px;
   background-color: #f3f3f3;
   border-radius: 10px;
-  padding: 1rem 2rem;
+  padding: 2rem;
   margin: 0 auto;
 }
 
@@ -11,5 +11,24 @@
   display: block;
   text-align: right;
   font-size: 14px;
+  /* margin-bottom: 1rem; */
+}
+
+/* fix: trocar o nome disso depois */
+.testando {
+  /* background-color: darkgreen; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   margin-bottom: 1rem;
+}
+
+.title {
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 800px) {
+  .app {
+    padding: 1.5rem;
+  }
 }
