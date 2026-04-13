@@ -8,19 +8,24 @@ const Filter = ({ filter, setFilter, setSort }) => {
       <div className={styles.filterOptions}>
         <div>
           <label htmlFor="status">Status:</label>
-
-          <select
-            id="status"
-            name="status"
-            value={filter}
-            onChange={(e) => setFilter(e.target.value)}
+          <button
+            value="All"
+            onClick={(e) => setFilter(e.target.value)}
+            className={filter === 'All' ? styles.active : ''}
           >
-            <option value="All">Todas</option>
-            <option value="Completed">Completas</option>
-            <option value="Incomplete">Incompletas</option>
-          </select>
+            Todas
+          </button>
+
+          <button value="Completed" onClick={(e) => setFilter(e.target.value)}>
+            Completas
+          </button>
+
+          <button value="Incomplete" onClick={(e) => setFilter(e.target.value)}>
+            Incompletas
+          </button>
         </div>
 
+        {/* fix: isso ordenar não precisa */}
         <fieldset className={styles.sortOptions}>
           <legend>Ordem alfabética:</legend>
 

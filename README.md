@@ -1,4 +1,4 @@
-# to-do-list
+# To-do list
 
 - React + Vite
 - Estrutura de pastas escalável
@@ -47,3 +47,20 @@ react-vite-template/
 ├── README.md
 └── vite.config.js
 ```
+
+### Requisitos funcionais
+
+- [] Criar, Editar, Excluir tarefas
+- [] Marcar como concluída
+- [] Filtrar tarefas
+- [] Ordenar tarefas
+- [] Persistir dados via API
+
+### Requisitos não funcionais
+
+- [] Interface responsiva
+- [] Performance otimizada
+- [] Validação de dados
+- [] Tratamento de erros
+- [] Código modular e tipado
+- [] Acessibilidade básica

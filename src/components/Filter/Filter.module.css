@@ -14,6 +14,10 @@
   flex: 1 1 0;
 }
 
+.active {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
 .sortOptions {
   display: flex;
   gap: 0.5rem;

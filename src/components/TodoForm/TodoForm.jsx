@@ -24,7 +24,7 @@ const TodoForm = ({ addTodo }) => {
           <input
             id="title"
             type="text"
-            placeholder="Nova tarefa"
+            placeholder="Nova tarefa..."
             value={value}
             onChange={(e) => setValue(e.target.value)}
           />
@@ -41,7 +41,7 @@ const TodoForm = ({ addTodo }) => {
           </select>
         </div>
 
-        <button type="submit">Criar tarefa</button>
+        <button type="submit">+ Add</button>
       </form>
     </section>
   );

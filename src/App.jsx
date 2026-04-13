@@ -12,6 +12,9 @@ const App = () => {
   const [filter, setFilter] = useState('All');
   const [sort, setSort] = useState('Asc');
 
+  const tasks = todos.length;
+  const completedTasks = todos.filter((todo) => todo.isCompleted).length;
+
   const addTodo = (text, category) => {
     const newTodo = {
       id: Math.floor(Math.random() * 1000),
@@ -25,11 +28,15 @@ const App = () => {
 
   return (
     <main className="app">
-      <h1>Lista de tarefas</h1>
+      <h1>To-do list</h1>
       <TodoForm addTodo={addTodo} />
 
       <Search search={search} setSearch={setSearch} />
       <Filter filter={filter} setFilter={setFilter} setSort={setSort} />
+
+      <span>
+        Tarefas: {completedTasks}/{tasks}
+      </span>
 
       <TodoList
         todos={todos}
