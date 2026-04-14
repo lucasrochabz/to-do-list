@@ -11,9 +11,6 @@ const App = () => {
   const [search, setSearch] = useState('');
   const [filter, setFilter] = useState('All');
 
-  const tasks = todos.length;
-  const completedTasks = todos.filter((todo) => todo.isCompleted).length;
-
   const addTodo = (text) => {
     const newTodo = {
       id: Math.floor(Math.random() * 1000),
@@ -31,13 +28,7 @@ const App = () => {
 
       <Search search={search} setSearch={setSearch} />
 
-      <div className="testando">
-        <Filter filter={filter} setFilter={setFilter} />
-
-        <span>
-          Tarefas: {completedTasks}/{tasks}
-        </span>
-      </div>
+      <Filter filter={filter} setFilter={setFilter} todos={todos} />
 
       <TodoList
         todos={todos}

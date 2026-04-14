@@ -15,19 +15,17 @@ const TodoForm = ({ addTodo }) => {
   };
 
   return (
-    <section className={styles.todoForm}>
-      <form className={styles.form} onSubmit={handleSubmit}>
-        <input
-          id="title"
-          type="text"
-          placeholder="Nova tarefa..."
-          value={value}
-          onChange={(e) => setValue(e.target.value)}
-        />
+    <form className={styles.form} onSubmit={handleSubmit}>
+      <input
+        id="title"
+        type="text"
+        placeholder="Nova tarefa..."
+        value={value}
+        onChange={(e) => setValue(e.target.value)}
+      />
 
-        <Button type="submit">+ Add</Button>
-      </form>
-    </section>
+      <Button type="submit">+ Add</Button>
+    </form>
   );
 };
 

@@ -1,33 +1,37 @@
 import Button from '../Button/Button';
 import styles from './Filter.module.css';
 
-const Filter = ({ filter, setFilter }) => {
+const Filter = ({ filter, setFilter, todos }) => {
+  const tasks = todos.length;
+  const completedTasks = todos.filter((todo) => todo.isCompleted).length;
+
+  const filters = [
+    { label: 'Todas', value: 'All' },
+    { label: 'Completas', value: 'Completed' },
+    { label: 'Incompletas', value: 'Incomplete' },
+  ];
+
   return (
-    <section className={styles.filter}>
-      <Button
-        variant={filter === 'All' ? 'active' : 'filterOptions'}
-        value="All"
-        onClick={(e) => setFilter(e.target.value)}
-      >
-        Todas
-      </Button>
+    <>
+      <section className={styles.filter}>
+        <div>
+          {filters.map(({ label, value }) => (
+            <Button
+              key={value}
+              variant={filter === value ? 'active' : 'filterOptions'}
+              value={value}
+              onClick={(e) => setFilter(e.target.value)}
+            >
+              {label}
+            </Button>
+          ))}
+        </div>
 
-      <Button
-        variant={filter === 'Completed' ? 'active' : 'filterOptions'}
-        value="Completed"
-        onClick={(e) => setFilter(e.target.value)}
-      >
-        Completas
-      </Button>
-
-      <Button
-        variant={filter === 'Incomplete' ? 'active' : 'filterOptions'}
-        value="Incomplete"
-        onClick={(e) => setFilter(e.target.value)}
-      >
-        Incompletas
-      </Button>
-    </section>
+        <span>
+          Tarefas: {completedTasks}/{tasks}
+        </span>
+      </section>
+    </>
   );
 };
 

@@ -21,7 +21,7 @@ const TodoList = ({ todos, setTodos, search, filter }) => {
   };
 
   return (
-    <section className={styles.todoList}>
+    <ul className={styles.todoList}>
       {todos
         .filter((todo) =>
           filter === 'All'
@@ -41,7 +41,7 @@ const TodoList = ({ todos, setTodos, search, filter }) => {
             removeTodo={removeTodo}
           />
         ))}
-    </section>
+    </ul>
   );
 };
 

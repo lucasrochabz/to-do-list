@@ -5,7 +5,7 @@ import styles from './Todo.module.css';
 
 const Todo = ({ todo, completeTodo, removeTodo }) => {
   return (
-    <div
+    <li
       className={styles.todo}
       style={{ textDecoration: todo.isCompleted ? 'line-through' : 'none' }}
     >
@@ -22,7 +22,7 @@ const Todo = ({ todo, completeTodo, removeTodo }) => {
           <Trash2 size={24} strokeWidth={1} />
         </Button>
       </div>
-    </div>
+    </li>
   );
 };
 
