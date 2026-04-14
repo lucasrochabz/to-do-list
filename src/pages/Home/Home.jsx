@@ -11,15 +11,43 @@ const Home = () => {
   const [search, setSearch] = useState('');
   const [filter, setFilter] = useState('All');
 
+  const tasks = todos.length;
+  const completedTasks = todos.filter((todo) => todo.isCompleted).length;
+
   const addTodo = (text) => {
     const newTodo = {
-      id: Math.floor(Math.random() * 1000),
+      id: crypto.randomUUID(),
       text,
       isCompleted: false,
     };
 
-    setTodos([...todos, newTodo]);
+    setTodos((prev) => [...prev, newTodo]);
   };
+
+  const completeTodo = (id) => {
+    const updatedTodos = todos.map((todo) =>
+      todo.id === id ? { ...todo, isCompleted: !todo.isCompleted } : todo,
+    );
+
+    setTodos(updatedTodos);
+  };
+
+  const removeTodo = (id) => {
+    const updatedTodos = [...todos];
+    const filteredTodos = updatedTodos.filter((todo) =>
+      todo.id !== id ? todo : null,
+    );
+
+    setTodos(filteredTodos);
+  };
+
+  const filteredTodos = todos
+    .filter((todo) => {
+      if (filter === 'Completed') return todo.isCompleted;
+      if (filter === 'Incomplete') return !todo.isCompleted;
+      return true;
+    })
+    .filter((todo) => todo.text.toLowerCase().includes(search.toLowerCase()));
 
   return (
     <main className={styles.app}>
@@ -28,13 +56,17 @@ const Home = () => {
 
       <Search search={search} setSearch={setSearch} />
 
-      <Filter filter={filter} setFilter={setFilter} todos={todos} />
+      <Filter
+        filter={filter}
+        setFilter={setFilter}
+        tasks={tasks}
+        completedTasks={completedTasks}
+      />
 
       <TodoList
-        todos={todos}
-        setTodos={setTodos}
-        search={search}
-        filter={filter}
+        todos={filteredTodos}
+        completeTodo={completeTodo}
+        removeTodo={removeTodo}
       />
     </main>
   );

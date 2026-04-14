@@ -1,10 +1,7 @@
 import { Button } from '@/components/Button';
 import styles from './Filter.module.css';
 
-const Filter = ({ filter, setFilter, todos }) => {
-  const tasks = todos.length;
-  const completedTasks = todos.filter((todo) => todo.isCompleted).length;
-
+const Filter = ({ filter, setFilter, tasks, completedTasks }) => {
   const filters = [
     { label: 'Todas', value: 'All' },
     { label: 'Completas', value: 'Completed' },
@@ -20,7 +17,7 @@ const Filter = ({ filter, setFilter, todos }) => {
               key={value}
               variant={filter === value ? 'active' : 'filterOptions'}
               value={value}
-              onClick={(e) => setFilter(e.target.value)}
+              onClick={() => setFilter(value)}
             >
               {label}
             </Button>

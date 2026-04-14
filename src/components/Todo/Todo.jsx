@@ -4,15 +4,11 @@ import { Trash2 } from 'lucide-react';
 import styles from './Todo.module.css';
 
 const Todo = ({ todo, completeTodo, removeTodo }) => {
+  const completedClass = todo.isCompleted ? styles.todoCompleted : '';
+
   return (
-    <li
-      className={styles.todo}
-      // fix: remover esse estilo inline
-      style={{ textDecoration: todo.isCompleted ? 'line-through' : 'none' }}
-    >
-      <div className="content">
-        <p>{todo.text}</p>
-      </div>
+    <li className={`${styles.todo} ${completedClass}`}>
+      <p>{todo.text}</p>
 
       <div className={styles.buttons}>
         <Button variant="icon" onClick={() => completeTodo(todo.id)}>

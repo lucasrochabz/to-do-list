@@ -8,6 +8,10 @@
   padding: 10px;
 }
 
+.todoCompleted {
+  text-decoration: line-through;
+}
+
 .buttons {
   display: flex;
   gap: 10px;
