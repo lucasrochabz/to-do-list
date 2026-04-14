@@ -1,4 +1,4 @@
-export const data = [
+export const mockTodos = [
   {
     id: 1,
     text: 'Criar funcionalidade X no sistema',

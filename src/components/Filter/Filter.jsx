@@ -1,4 +1,4 @@
-import Button from '../Button/Button';
+import { Button } from '@/components/Button';
 import styles from './Filter.module.css';
 
 const Filter = ({ filter, setFilter, todos }) => {
@@ -14,7 +14,7 @@ const Filter = ({ filter, setFilter, todos }) => {
   return (
     <>
       <section className={styles.filter}>
-        <div>
+        <nav>
           {filters.map(({ label, value }) => (
             <Button
               key={value}
@@ -25,7 +25,7 @@ const Filter = ({ filter, setFilter, todos }) => {
               {label}
             </Button>
           ))}
-        </div>
+        </nav>
 
         <span>
           Tarefas: {completedTasks}/{tasks}

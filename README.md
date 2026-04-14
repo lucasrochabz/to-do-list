@@ -9,14 +9,32 @@
 - Suporte a módulos CSS
 - Importações de alias configuradas
 
+### Requisitos funcionais
+
+- [ ] Criar, Editar, Excluir tarefas
+- [ ] Marcar como concluída
+- [ ] Filtrar tarefas
+- [ ] Ordenar tarefas
+- [ ] Persistir dados via API
+
+### Requisitos não funcionais
+
+- [ ] Interface responsiva
+- [ ] Performance otimizada
+- [ ] Validação de dados
+- [ ] Tratamento de erros
+- [ ] Código modular e tipado
+- [ ] Acessibilidade básica
+
 ### Estrutura do projeto
 
 ```bash
-react-vite-template/
+to-do-list/
 ├── public/
 ├── src/
 │   ├── assets/
 │   ├── components/
+│   │   ├── Button/
 │   │   ├── Filter/
 │   │   ├── Search/
 │   │   ├── Todo/
@@ -25,15 +43,15 @@ react-vite-template/
 │   │
 │   ├── contexts/
 │   ├── hooks/
+│   ├── mocks/
+│   │   └── todos.js
+│   │
 │   ├── pages/
-│   │   └── HomePage/
-│   │       ├── HomePage.jsx
-│   │       ├── HomePage.module.css
-│   │       └── index.js
+│   │   ├── Home/
+│   │   └── NotFound/
 │   │
 │   ├── routes/
 │   ├── styles/
-│   ├── App.css
 │   ├── App.jsx
 │   └── main.jsx
 │
@@ -47,20 +65,3 @@ react-vite-template/
 ├── README.md
 └── vite.config.js
 ```
-
-### Requisitos funcionais
-
-- [] Criar, Editar, Excluir tarefas
-- [] Marcar como concluída
-- [] Filtrar tarefas
-- [] Ordenar tarefas
-- [] Persistir dados via API
-
-### Requisitos não funcionais
-
-- [] Interface responsiva
-- [] Performance otimizada
-- [] Validação de dados
-- [] Tratamento de erros
-- [] Código modular e tipado
-- [] Acessibilidade básica

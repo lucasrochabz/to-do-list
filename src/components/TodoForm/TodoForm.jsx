@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import Button from '../Button/Button';
+import { Button } from '@/components/Button';
 import styles from './TodoForm.module.css';
 
 const TodoForm = ({ addTodo }) => {

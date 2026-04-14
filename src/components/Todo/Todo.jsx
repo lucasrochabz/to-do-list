@@ -1,4 +1,4 @@
-import Button from '../Button/Button';
+import { Button } from '@/components/Button';
 import { Check } from 'lucide-react';
 import { Trash2 } from 'lucide-react';
 import styles from './Todo.module.css';
@@ -7,6 +7,7 @@ const Todo = ({ todo, completeTodo, removeTodo }) => {
   return (
     <li
       className={styles.todo}
+      // fix: remover esse estilo inline
       style={{ textDecoration: todo.isCompleted ? 'line-through' : 'none' }}
     >
       <div className="content">
