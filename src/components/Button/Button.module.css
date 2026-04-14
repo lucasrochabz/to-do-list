@@ -1,0 +1,31 @@
+.base {
+  background: none;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+  padding: 0.2rem 0.4rem;
+}
+
+.primary {
+  background-color: #000;
+  color: #fff;
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+}
+
+.primary:hover {
+  opacity: 0.9;
+}
+
+.icon:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.filterOptions {
+  color: #000;
+}
+
+.active {
+  background-color: rgba(0, 0, 0, 0.3);
+}

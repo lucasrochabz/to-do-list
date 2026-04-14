@@ -20,36 +20,19 @@ h2 {
   margin-bottom: 10px;
 }
 
-button {
-  background: none;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  /* opacity: 0.8; */
-  transition: 0.3s;
-  padding: 0.2rem 0.4rem;
-}
-
-button:hover {
-  /* opacity: 1; */
-  background-color: rgba(0, 0, 0, 0.1);
-}
-
-label, legend, span {
+span {
   font-weight: bold;
 }
 
-input, select {
+input {
   width: 100%;
   border: 1px solid #ddd;
-  border-radius: 3px;
-  padding: 5px;
+  border-radius: 5px;
+  padding: 0.5rem;
 }
 
 input[type="text"] {
   font-size: 1rem;
-  padding: 0.5rem;
-  border-radius: 5px;
 }
 
 @media (max-width: 800px) {

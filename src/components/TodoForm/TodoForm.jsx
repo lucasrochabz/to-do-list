@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import Button from '../Button/Button';
 import styles from './TodoForm.module.css';
 
 const TodoForm = ({ addTodo }) => {
@@ -16,17 +17,15 @@ const TodoForm = ({ addTodo }) => {
   return (
     <section className={styles.todoForm}>
       <form className={styles.form} onSubmit={handleSubmit}>
-        <div className={styles.group}>
-          <input
-            id="title"
-            type="text"
-            placeholder="Nova tarefa..."
-            value={value}
-            onChange={(e) => setValue(e.target.value)}
-          />
-        </div>
+        <input
+          id="title"
+          type="text"
+          placeholder="Nova tarefa..."
+          value={value}
+          onChange={(e) => setValue(e.target.value)}
+        />
 
-        <button type="submit">+ Add</button>
+        <Button type="submit">+ Add</Button>
       </form>
     </section>
   );

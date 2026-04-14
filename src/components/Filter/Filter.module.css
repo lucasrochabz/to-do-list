@@ -1,30 +1,4 @@
 .filter {
-  /* border-bottom: 1px solid #555; */
-  /* padding-bottom: 20px; */
-  /* margin-bottom: 1rem; */
-}
-
-.filterOptions {
-  display: flex;
-  justify-content: space-between;
-  gap: 1rem;
-}
-
-.filterOptions div {
-  display: flex;
-  gap: 1rem;
-  /* background-color: red; */
-  /* flex: 1 1 0; */
-}
-
-.active {
-  background-color: rgba(0, 0, 0, 0.5);
-}
-
-.sortOptions {
   display: flex;
   gap: 0.5rem;
-  border: 1px solid #aaa;
-  border-radius: 5px;
-  padding: 0.5rem 1rem;
 }

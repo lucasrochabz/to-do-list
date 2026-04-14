@@ -1,3 +1,4 @@
+import Button from '../Button/Button';
 import { Check } from 'lucide-react';
 import { Trash2 } from 'lucide-react';
 import styles from './Todo.module.css';
@@ -13,13 +14,13 @@ const Todo = ({ todo, completeTodo, removeTodo }) => {
       </div>
 
       <div className={styles.buttons}>
-        <button onClick={() => completeTodo(todo.id)}>
+        <Button variant="icon" onClick={() => completeTodo(todo.id)}>
           <Check size={24} strokeWidth={1} />
-        </button>
+        </Button>
 
-        <button onClick={() => removeTodo(todo.id)}>
+        <Button variant="icon" onClick={() => removeTodo(todo.id)}>
           <Trash2 size={24} strokeWidth={1} />
-        </button>
+        </Button>
       </div>
     </div>
   );
