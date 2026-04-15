@@ -1,4 +1,8 @@
 .app {
+  height: calc(100vh - 40px);
+  overflow: auto;
+  /* scrollbar-width: none; */
+
   max-width: 600px;
   border-radius: 10px;
   padding: 2rem;
@@ -7,6 +11,7 @@
 
 .title {
   margin-bottom: 2rem;
+  text-align: left;
 }
 
 @media (max-width: 800px) {

@@ -1,0 +1,14 @@
+.footer {
+  max-width: 600px;
+  margin: 0 auto;
+  color: #fff;
+  background-color: #000;
+  display: flex;
+  justify-content: space-around;
+  padding: 0.5rem 0;
+}
+
+.nav {
+  display: flex;
+  gap: 0.5rem;
+}
