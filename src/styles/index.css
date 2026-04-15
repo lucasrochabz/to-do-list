@@ -10,6 +10,12 @@ body {
   color: #333;
 }
 
+#root {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
 h1 {
   text-align: center;
 }
