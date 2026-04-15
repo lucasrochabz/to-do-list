@@ -5,6 +5,11 @@
   margin-bottom: 1rem;
 }
 
+.filter nav {
+  display: flex;
+  gap: 0.5rem;
+}
+
 .filter span {
   font-size: 14px;
 }
