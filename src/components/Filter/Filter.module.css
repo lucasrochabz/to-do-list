@@ -10,6 +10,10 @@
   gap: 0.5rem;
 }
 
-.filter span {
+.filter button {
   font-size: 14px;
+}
+
+.filter span {
+  font-size: 12px;
 }
