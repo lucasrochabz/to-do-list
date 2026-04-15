@@ -1,20 +1,4 @@
-.app {
-  flex: 1;
-  max-width: 600px;
-  width: 100%;
-  overflow: auto;
-  /* scrollbar-width: none; */
-  padding: 2rem;
-  margin: 0 auto;
-}
-
 .title {
   margin-bottom: 2rem;
   text-align: left;
-}
-
-@media (max-width: 800px) {
-  .app {
-    padding: 1.5rem;
-  }
 }

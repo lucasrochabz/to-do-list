@@ -1,0 +1,15 @@
+@keyframes slideLeft {
+  from {
+    /* transform: translateX(100%); */
+    transform: translateX(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.anim-slide-left {
+  animation: slideLeft 0.3s ease;
+}

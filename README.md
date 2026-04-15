@@ -36,6 +36,8 @@ to-do-list/
 │   ├── components/
 │   │   ├── Button/
 │   │   ├── Filter/
+│   │   ├── Footer/
+│   │   ├── MainLayout/
 │   │   ├── Search/
 │   │   ├── Todo/
 │   │   ├── TodoForm/
@@ -47,11 +49,17 @@ to-do-list/
 │   │   └── todos.js
 │   │
 │   ├── pages/
+│   │   ├── Bin/
 │   │   ├── Home/
 │   │   └── NotFound/
 │   │
 │   ├── routes/
+│   │   └── app.routes.jsx
+│   │
 │   ├── styles/
+│   │   ├── animations/
+│   │   └── index.css
+│   │
 │   ├── utils/
 │   ├── App.jsx
 │   └── main.jsx
@@ -66,3 +74,7 @@ to-do-list/
 ├── README.md
 └── vite.config.js
 ```
+
+### Anotações
+
+- add depois framer-motion

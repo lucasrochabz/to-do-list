@@ -6,7 +6,6 @@ import { TodoForm } from '@/components/TodoForm';
 import { Search } from '@/components/Search';
 import { Filter } from '@/components/Filter';
 import { TodoList } from '@/components/TodoList';
-import { Footer } from '@/components/Footer';
 import styles from './Home.module.css';
 
 const Home = () => {
@@ -22,27 +21,24 @@ const Home = () => {
 
   return (
     <>
-      <main className={styles.app}>
-        <h1 className={styles.title}>Suas tarefas</h1>
+      <h1 className={styles.title}>Suas tarefas</h1>
 
-        <TodoForm addTodo={addTodo} />
+      <TodoForm addTodo={addTodo} />
 
-        <Search search={search} setSearch={setSearch} />
+      <Search search={search} setSearch={setSearch} />
 
-        <Filter
-          filter={filter}
-          setFilter={setFilter}
-          tasks={tasks}
-          completedTasks={completedTasks}
-        />
+      <Filter
+        filter={filter}
+        setFilter={setFilter}
+        tasks={tasks}
+        completedTasks={completedTasks}
+      />
 
-        <TodoList
-          todos={filteredTodos}
-          completeTodo={completeTodo}
-          removeTodo={removeTodo}
-        />
-      </main>
-      <Footer />
+      <TodoList
+        todos={filteredTodos}
+        completeTodo={completeTodo}
+        removeTodo={removeTodo}
+      />
     </>
   );
 };
