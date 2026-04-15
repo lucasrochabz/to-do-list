@@ -1,11 +1,9 @@
 .app {
   flex: 1;
-  overflow: auto;
-  /* scrollbar-width: none; */
-
   max-width: 600px;
   width: 100%;
-  border-radius: 10px;
+  overflow: auto;
+  /* scrollbar-width: none; */
   padding: 2rem;
   margin: 0 auto;
 }
