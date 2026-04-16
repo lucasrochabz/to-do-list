@@ -22,6 +22,10 @@ export const useTodos = (initialTodos) => {
   };
 
   const removeTodo = (id) => {
+    const confimed = confirm('Deseja remover este item?');
+
+    if (!confimed) return;
+
     setTodos((prev) => prev.filter((todo) => todo.id !== id));
   };
 
