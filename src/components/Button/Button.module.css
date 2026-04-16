@@ -9,6 +9,8 @@
 .primary {
   background-color: #000;
   color: #fff;
+  font-weight: bold;
+  text-transform: uppercase;
   border-radius: 5px;
   padding: 0.5rem 1rem;
 }

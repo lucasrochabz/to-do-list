@@ -1,20 +1,24 @@
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { SquareCheck, Trash } from 'lucide-react';
 import styles from './Footer.module.css';
 
 const Footer = () => {
-  return (
-    <footer>
-      <nav className={styles.footer}>
-        <Link to="/" className={styles.nav}>
-          <SquareCheck />
-          <h3>Tarefas</h3>
-        </Link>
+  const getNavClass = ({ isActive }) => {
+    return `${styles.link} ${isActive ? styles.active : undefined}`;
+  };
 
-        <Link to="/bin" className={styles.nav}>
+  return (
+    <footer className={styles.footer}>
+      <nav className={styles.nav} aria-label="Navegação do rodapé">
+        <NavLink to="/" className={getNavClass}>
+          <SquareCheck />
+          <span>Tarefas</span>
+        </NavLink>
+
+        <NavLink to="/bin" className={getNavClass}>
           <Trash />
-          <h3>Lixeira</h3>
-        </Link>
+          <span>Lixeira</span>
+        </NavLink>
       </nav>
     </footer>
   );
