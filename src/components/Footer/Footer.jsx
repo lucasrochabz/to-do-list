@@ -4,7 +4,7 @@ import styles from './Footer.module.css';
 
 const Footer = () => {
   const getNavClass = ({ isActive }) => {
-    return `${styles.link} ${isActive ? styles.active : undefined}`;
+    return `${styles.link} ${isActive ? styles.active : ''}`;
   };
 
   return (
