@@ -1,7 +1,7 @@
 import { Button } from '@/components/Button';
 import styles from './Filter.module.css';
 
-const Filter = ({ filter, setFilter, tasks, completedTasks }) => {
+const Filter = ({ filter, setFilter, totalTasks, completedTasks }) => {
   const filters = [
     { label: 'Todas', value: 'All' },
     { label: 'Completas', value: 'Completed' },
@@ -25,7 +25,7 @@ const Filter = ({ filter, setFilter, tasks, completedTasks }) => {
         </nav>
 
         <span>
-          Tarefas: {completedTasks}/{tasks}
+          Tarefas: {completedTasks}/{totalTasks}
         </span>
       </section>
     </>

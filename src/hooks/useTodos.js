@@ -1,7 +1,15 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import { STORAGE_KEYS } from '@/constants/storageKeys';
 
-export const useTodos = (initialTodos) => {
-  const [todos, setTodos] = useState(initialTodos);
+export const useTodos = (initialTodos, addToTrash) => {
+  const [todos, setTodos] = useState(() => {
+    const stored = localStorage.getItem(STORAGE_KEYS.TODOS);
+    return stored ? JSON.parse(stored) : initialTodos;
+  });
+
+  useEffect(() => {
+    localStorage.setItem(STORAGE_KEYS.TODOS, JSON.stringify(todos));
+  }, [todos]);
 
   const addTodo = (text) => {
     const newTodo = {
@@ -22,11 +30,15 @@ export const useTodos = (initialTodos) => {
   };
 
   const removeTodo = (id) => {
-    const confimed = confirm('Deseja remover este item?');
+    const confirmed = confirm('Deseja remover este item?');
+    if (!confirmed) return;
 
-    if (!confimed) return;
+    const todoToRemove = todos.find((todo) => todo.id === id);
+    if (!todoToRemove) return;
 
     setTodos((prev) => prev.filter((todo) => todo.id !== id));
+
+    addToTrash(todoToRemove);
   };
 
   return {

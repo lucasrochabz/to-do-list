@@ -1,13 +1,13 @@
 import { MainLayout } from '@/components/MainLayout';
-import { Bin } from '@/pages/Bin';
 import { Home } from '@/pages/Home';
+import { TrashPage } from '@/pages/TrashPage';
 
 export const routes = [
   {
     element: <MainLayout />,
     children: [
       { path: '/', element: <Home /> },
-      { path: '/bin', element: <Bin /> },
+      { path: '/trash', element: <TrashPage /> },
     ],
   },
 ];

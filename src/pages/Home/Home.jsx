@@ -1,6 +1,7 @@
 import { useState } from 'react';
-import { mockTodos } from '@/mocks/todos';
+import { useTrash } from '@/hooks/useTrash';
 import { useTodos } from '@/hooks/useTodos';
+import { mockTodos } from '@/mocks/todos';
 import { filterTodos } from '@/utils/filterTodos';
 import { TodoForm } from '@/components/TodoForm';
 import { Search } from '@/components/Search';
@@ -9,14 +10,18 @@ import { TodoList } from '@/components/TodoList';
 import styles from './Home.module.css';
 
 const Home = () => {
-  const { todos, addTodo, completeTodo, removeTodo } = useTodos(mockTodos);
+  const { addToTrash } = useTrash();
+  const { todos, addTodo, completeTodo, removeTodo } = useTodos(
+    mockTodos,
+    addToTrash,
+  );
 
   const [search, setSearch] = useState('');
   const [filter, setFilter] = useState('All');
 
   const filteredTodos = filterTodos(todos, filter, search);
 
-  const tasks = todos.length;
+  const totalTasks = todos.length;
   const completedTasks = todos.filter((todo) => todo.isCompleted).length;
 
   return (
@@ -30,7 +35,7 @@ const Home = () => {
       <Filter
         filter={filter}
         setFilter={setFilter}
-        tasks={tasks}
+        totalTasks={totalTasks}
         completedTasks={completedTasks}
       />
 
