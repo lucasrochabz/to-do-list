@@ -30,9 +30,6 @@ export const useTodos = (initialTodos, addToTrash) => {
   };
 
   const removeTodo = (id) => {
-    const confirmed = confirm('Deseja remover este item?');
-    if (!confirmed) return;
-
     const todoToRemove = todos.find((todo) => todo.id === id);
     if (!todoToRemove) return;
 

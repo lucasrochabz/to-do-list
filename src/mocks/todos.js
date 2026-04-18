@@ -1,7 +1,7 @@
 export const mockTodos = [
   {
     id: 1,
-    text: 'Criar funcionalidade X no sistema',
+    text: 'Correr 5km',
     isCompleted: false,
   },
   {

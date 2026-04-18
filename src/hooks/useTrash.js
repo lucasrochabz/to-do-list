@@ -29,6 +29,9 @@ export const useTrash = () => {
   };
 
   const clearTrash = () => {
+    const confirmed = confirm('Deseja esvaziar a lixeira?');
+    if (!confirmed) return;
+
     setTrash([]);
   };
 
