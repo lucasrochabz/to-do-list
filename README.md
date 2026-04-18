@@ -35,13 +35,15 @@ to-do-list/
 │   ├── assets/
 │   ├── components/
 │   │   ├── Button/
+│   │   ├── EmptyState/
 │   │   ├── Filter/
 │   │   ├── Footer/
 │   │   ├── MainLayout/
 │   │   ├── Search/
 │   │   ├── Todo/
 │   │   ├── TodoForm/
-│   │   └── TodoList/
+│   │   ├── TodoList/
+│   │   └── TrashList/
 │   │
 │   ├── contexts/
 │   ├── hooks/
@@ -49,9 +51,9 @@ to-do-list/
 │   │   └── todos.js
 │   │
 │   ├── pages/
-│   │   ├── Bin/
 │   │   ├── Home/
-│   │   └── NotFound/
+│   │   ├── NotFound/
+│   │   └── TrashPage/
 │   │
 │   ├── routes/
 │   │   └── app.routes.jsx
