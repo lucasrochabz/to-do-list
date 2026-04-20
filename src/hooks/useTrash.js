@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { STORAGE_KEYS } from '@/constants/storageKeys';
 
-// fix: acho que é melhor fazer um context TrashProvider
+// fix: fazer contexto TodosContext
 export const useTrash = () => {
   const [trash, setTrash] = useState(() => {
     const stored = localStorage.getItem(STORAGE_KEYS.TRASH);
@@ -12,28 +12,28 @@ export const useTrash = () => {
     localStorage.setItem(STORAGE_KEYS.TRASH, JSON.stringify(trash));
   }, [trash]);
 
-  const addToTrash = (todo) => {
-    setTrash((prev) => [...prev, todo]);
-  };
+  // const addToTrash = (todo) => {
+  //   setTrash((prev) => [...prev, todo]);
+  // };
 
-  const restoreTodo = (id) => {
-    const todo = trash.find((item) => item.id === id);
+  // const restoreTodo = (id) => {
+  //   const todo = trash.find((item) => item.id === id);
 
-    setTrash((prev) => prev.filter((item) => item.id !== id));
+  //   setTrash((prev) => prev.filter((item) => item.id !== id));
 
-    return todo;
-  };
+  //   return todo;
+  // };
 
-  const deleteForever = (id) => {
-    setTrash((prev) => prev.filter((item) => item.id !== id));
-  };
+  // const deleteForever = (id) => {
+  //   setTrash((prev) => prev.filter((item) => item.id !== id));
+  // };
 
-  const clearTrash = () => {
-    const confirmed = confirm('Deseja esvaziar a lixeira?');
-    if (!confirmed) return;
+  // const clearTrash = () => {
+  //   const confirmed = confirm('Deseja esvaziar a lixeira?');
+  //   if (!confirmed) return;
 
-    setTrash([]);
-  };
+  //   setTrash([]);
+  // };
 
   return {
     trash,

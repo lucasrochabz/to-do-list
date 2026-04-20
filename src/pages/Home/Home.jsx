@@ -1,7 +1,5 @@
-import { useState } from 'react';
-import { useTrash } from '@/hooks/useTrash';
-import { useTodos } from '@/hooks/useTodos';
-import { mockTodos } from '@/mocks/todos';
+import { useContext, useState } from 'react';
+import { TodoContext } from '@/contexts/TodoContext';
 import { filterTodos } from '@/utils/filterTodos';
 import { TodoForm } from '@/components/TodoForm';
 import { Search } from '@/components/Search';
@@ -10,12 +8,7 @@ import { TodoList } from '@/components/TodoList';
 import styles from './Home.module.css';
 
 const Home = () => {
-  const { addToTrash } = useTrash();
-  const { todos, addTodo, completeTodo, removeTodo } = useTodos(
-    mockTodos,
-    addToTrash,
-  );
-
+  const { todos, addTodo, completeTodo, removeTodo } = useContext(TodoContext);
   const [search, setSearch] = useState('');
   const [filter, setFilter] = useState('All');
 

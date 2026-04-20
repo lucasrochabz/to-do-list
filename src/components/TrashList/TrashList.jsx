@@ -2,7 +2,15 @@ import { Trash2, RotateCcw } from 'lucide-react';
 import { Button } from '@/components/Button';
 import styles from './TrashList.module.css';
 
-const TrashList = ({ trash, restoreTodo, deleteForever }) => {
+const TrashList = ({ trash, restoreTodo, deleteForever, addTodo }) => {
+  const handleRestore = (id) => {
+    const todo = restoreTodo(id);
+
+    if (todo) {
+      addTodo(todo.text);
+    }
+  };
+
   return (
     <ul className={styles.list}>
       {trash.map((item) => (
@@ -10,7 +18,7 @@ const TrashList = ({ trash, restoreTodo, deleteForever }) => {
           <p>{item.text}</p>
 
           <div>
-            <Button variant="icon" onClick={() => restoreTodo(item.id)}>
+            <Button variant="icon" onClick={() => handleRestore(item.id)}>
               <RotateCcw strokeWidth={1} />
             </Button>
 

@@ -46,6 +46,9 @@ to-do-list/
 │   │   └── TrashList/
 │   │
 │   ├── contexts/
+│   │   ├── TodoContext.js
+│   │   └── TodoProvider.jsx
+│   │
 │   ├── hooks/
 │   ├── mocks/
 │   │   └── todos.js

@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { STORAGE_KEYS } from '@/constants/storageKeys';
 
+// fix: fazer contexto TodosContext
 export const useTodos = (initialTodos, addToTrash) => {
   const [todos, setTodos] = useState(() => {
     const stored = localStorage.getItem(STORAGE_KEYS.TODOS);
@@ -11,32 +12,32 @@ export const useTodos = (initialTodos, addToTrash) => {
     localStorage.setItem(STORAGE_KEYS.TODOS, JSON.stringify(todos));
   }, [todos]);
 
-  const addTodo = (text) => {
-    const newTodo = {
-      id: crypto.randomUUID(),
-      text,
-      isCompleted: false,
-    };
+  // const addTodo = (text) => {
+  //   const newTodo = {
+  //     id: crypto.randomUUID(),
+  //     text,
+  //     isCompleted: false,
+  //   };
 
-    setTodos((prev) => [...prev, newTodo]);
-  };
+  //   setTodos((prev) => [...prev, newTodo]);
+  // };
 
-  const completeTodo = (id) => {
-    setTodos((prev) =>
-      prev.map((todo) =>
-        todo.id === id ? { ...todo, isCompleted: !todo.isCompleted } : todo,
-      ),
-    );
-  };
+  // const completeTodo = (id) => {
+  //   setTodos((prev) =>
+  //     prev.map((todo) =>
+  //       todo.id === id ? { ...todo, isCompleted: !todo.isCompleted } : todo,
+  //     ),
+  //   );
+  // };
 
-  const removeTodo = (id) => {
-    const todoToRemove = todos.find((todo) => todo.id === id);
-    if (!todoToRemove) return;
+  // const removeTodo = (id) => {
+  //   const todoToRemove = todos.find((todo) => todo.id === id);
+  //   if (!todoToRemove) return;
 
-    setTodos((prev) => prev.filter((todo) => todo.id !== id));
+  //   setTodos((prev) => prev.filter((todo) => todo.id !== id));
 
-    addToTrash(todoToRemove);
-  };
+  //   addToTrash(todoToRemove);
+  // };
 
   return {
     todos,
