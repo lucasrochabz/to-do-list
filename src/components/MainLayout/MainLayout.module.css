@@ -8,11 +8,6 @@
   margin: 0 auto;
 }
 
-.title {
-  text-align: left;
-  margin-bottom: var(--sapce-xl);
-}
-
 @media (max-width: 800px) {
   .app {
     padding: var(--sapce-lg);

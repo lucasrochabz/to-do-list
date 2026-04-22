@@ -12,7 +12,7 @@ const MainLayout = () => {
   return (
     <>
       <main key={location.pathname} className={`${styles.app} anim-slide-up`}>
-        <h1 className={styles.title}>{title}</h1>
+        <h1 className="title">{title}</h1>
         <Outlet />
       </main>
 

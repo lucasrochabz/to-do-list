@@ -14,8 +14,9 @@
 .link {
   display: flex;
   flex-direction: column;
+  font-size: var(--font-size-sm);
   align-items: center;
-  gap: var(--sapce-sm);
+  gap: var(--sapce-xs);
   opacity: 0.7;
 }
 
