@@ -4,17 +4,17 @@
   width: 100%;
   overflow: auto;
   /* scrollbar-width: none; */
-  padding: 2rem;
+  padding: var(--sapce-xl);
   margin: 0 auto;
 }
 
 .title {
-  margin-bottom: 2rem;
   text-align: left;
+  margin-bottom: var(--sapce-xl);
 }
 
 @media (max-width: 800px) {
   .app {
-    padding: 1.5rem;
+    padding: var(--sapce-lg);
   }
 }

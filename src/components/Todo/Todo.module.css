@@ -2,10 +2,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #fff;
+  background-color: var(--color-secondary);
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  padding: 0.5rem;
+  padding: var(--sapce-sm);
 }
 
 .todo p {
@@ -19,5 +19,5 @@
 
 .buttons {
   display: flex;
-  gap: 0.5rem;
+  gap: var(--sapce-sm);
 }

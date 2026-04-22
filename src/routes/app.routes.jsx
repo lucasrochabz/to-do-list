@@ -7,7 +7,7 @@ export const routes = [
   {
     element: <MainLayout />,
     children: [
-      { path: '/', element: <TodoPage />, handle: { title: 'Suas tarefas' } },
+      { path: '/', element: <TodoPage />, handle: { title: 'Tarefas' } },
       {
         path: '/trash',
         element: <TrashPage />,

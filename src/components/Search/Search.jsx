@@ -3,12 +3,16 @@ import styles from './Search.module.css';
 const Search = ({ search, setSearch }) => {
   return (
     <section className={styles.search}>
-      <h2>Pesquisar</h2>
+      <label htmlFor="search" className="sr-only">
+        Buscar tarefas
+      </label>
 
       <input
-        type="text"
+        type="search"
+        id="search"
+        name="search"
         value={search}
-        placeholder="Digite para pesquisar..."
+        placeholder="Procurar tarefas"
         onChange={(e) => setSearch(e.target.value)}
       />
     </section>

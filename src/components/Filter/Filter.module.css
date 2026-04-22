@@ -1,12 +1,12 @@
 .filter {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 1rem;
+  margin-bottom: var(--sapce-md);
 }
 
 .filter nav {
   display: flex;
-  gap: 0.5rem;
+  gap: var(--sapce-sm);
 }
 
 .filter button, .filter span {
