@@ -1,6 +1,6 @@
 import { useTodo } from '@/contexts/useTodo';
 import { EmptyState } from '@/components/EmptyState';
-import emptyTrash from '@/assets/undraw_clean-up_af4s.svg';
+import emptyTrash from '@/assets/illustrations/undraw_clean-up.svg';
 import { Button } from '@/components/Button';
 import { TrashList } from '@/components/TrashList';
 
