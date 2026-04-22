@@ -3,7 +3,7 @@
   justify-content: space-between;
   align-items: center;
   background-color: var(--color-secondary);
-  border-radius: 5px;
+  border-radius: var(--radius-sm);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   padding: var(--sapce-sm);
 }
@@ -17,7 +17,7 @@
   text-decoration: line-through;
 }
 
-.buttons {
+.actions {
   display: flex;
   gap: var(--sapce-sm);
 }

@@ -7,10 +7,15 @@
 
 .list li {
   background-color: var(--color-secondary);
-  border-radius: 5px;
+  border-radius: var(--radius-sm);
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: var(--sapce-sm);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.actions {
+  display: flex;
+  gap: var(--sapce-sm);
 }

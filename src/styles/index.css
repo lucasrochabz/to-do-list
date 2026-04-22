@@ -39,7 +39,7 @@ span {
 input {
   width: 100%;
   border: 1px solid #ddd;
-  border-radius: 5px;
+  border-radius: var(--radius-sm);
   padding: var(--sapce-sm);
 }
 
