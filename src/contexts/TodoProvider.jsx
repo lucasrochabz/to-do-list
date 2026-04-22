@@ -1,9 +1,10 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { STORAGE_KEYS } from '@/constants/storageKeys';
 import { mockTodos } from '@/mocks/todos';
 import { TodoContext } from './TodoContext';
 
-// fix: conferir se está tudo certo
+// fix: add useMemo no value
+// fix: add useCallback nas actions
 export const TodoProvider = ({ children }) => {
   const [todos, setTodos] = useState(() => {
     const stored = localStorage.getItem(STORAGE_KEYS.TODOS);
@@ -33,26 +34,26 @@ export const TodoProvider = ({ children }) => {
     );
   };
 
-  // move todo para lixeira
   const removeTodo = (id) => {
     const todoToRemove = todos.find((todo) => todo.id === id);
     if (!todoToRemove) return;
 
     setTodos((prev) => prev.filter((todo) => todo.id !== id));
-
-    addToTrash(todoToRemove);
+    setTrash((prev) => [...prev, todoToRemove]);
   };
 
-  const addToTrash = (todo) => {
-    setTrash((prev) => [...prev, todo]);
+  const restoreTodo = (id) => {
+    const todo = trash.find((item) => item.id === id);
+    if (!todo) return;
+
+    setTrash((prev) => prev.filter((item) => item.id !== id));
+    setTodos((prev) => [...prev, todo]);
   };
 
-  // remove lixo definitivamente
   const deleteForever = (id) => {
     setTrash((prev) => prev.filter((item) => item.id !== id));
   };
 
-  // limpar lixeira inteira
   const clearTrash = () => {
     const confirmed = confirm('Deseja esvaziar a lixeira?');
     if (!confirmed) return;
@@ -60,14 +61,13 @@ export const TodoProvider = ({ children }) => {
     setTrash([]);
   };
 
-  // move lixo para todos
-  const restoreTodo = (id) => {
-    const todo = trash.find((item) => item.id === id);
+  useEffect(() => {
+    localStorage.setItem(STORAGE_KEYS.TODOS, JSON.stringify(todos));
+  }, [todos]);
 
-    setTrash((prev) => prev.filter((item) => item.id !== id));
-
-    return todo;
-  };
+  useEffect(() => {
+    localStorage.setItem(STORAGE_KEYS.TRASH, JSON.stringify(trash));
+  }, [trash]);
 
   const value = {
     todos,
@@ -75,8 +75,6 @@ export const TodoProvider = ({ children }) => {
     addTodo,
     completeTodo,
     removeTodo,
-
-    addToTrash,
     restoreTodo,
     deleteForever,
     clearTrash,

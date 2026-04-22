@@ -1,13 +1,11 @@
-import { useContext } from 'react';
-import { TodoContext } from '@/contexts/TodoContext';
+import { useTodo } from '@/contexts/useTodo';
 import { EmptyState } from '@/components/EmptyState';
 import { Button } from '@/components/Button';
 import { TrashList } from '@/components/TrashList';
 import styles from './TrashPage.module.css';
 
 const TrashPage = () => {
-  const { trash, clearTrash, restoreTodo, deleteForever, addTodo } =
-    useContext(TodoContext);
+  const { trash, clearTrash, restoreTodo, deleteForever } = useTodo();
 
   let content;
   if (!trash.length) content = <EmptyState message="Lixeira vazia" />;
@@ -20,7 +18,6 @@ const TrashPage = () => {
           trash={trash}
           restoreTodo={restoreTodo}
           deleteForever={deleteForever}
-          addTodo={addTodo}
         />
       </section>
     );

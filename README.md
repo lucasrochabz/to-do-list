@@ -45,17 +45,20 @@ to-do-list/
 │   │   ├── TodoList/
 │   │   └── TrashList/
 │   │
+│   ├── constants/
+│   │   └── storageKeys.js
+│   │
 │   ├── contexts/
 │   │   ├── TodoContext.js
-│   │   └── TodoProvider.jsx
+│   │   ├── TodoProvider.jsx
+│   │   └── useTodo.js
 │   │
-│   ├── hooks/
 │   ├── mocks/
 │   │   └── todos.js
 │   │
 │   ├── pages/
-│   │   ├── Home/
 │   │   ├── NotFound/
+│   │   ├── TodoPage/
 │   │   └── TrashPage/
 │   │
 │   ├── routes/

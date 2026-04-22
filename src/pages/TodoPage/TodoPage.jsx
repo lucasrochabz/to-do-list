@@ -1,14 +1,15 @@
-import { useContext, useState } from 'react';
-import { TodoContext } from '@/contexts/TodoContext';
+import { useState } from 'react';
+import { useTodo } from '@/contexts/useTodo';
 import { filterTodos } from '@/utils/filterTodos';
 import { TodoForm } from '@/components/TodoForm';
 import { Search } from '@/components/Search';
 import { Filter } from '@/components/Filter';
+import { EmptyState } from '@/components/EmptyState';
 import { TodoList } from '@/components/TodoList';
-import styles from './Home.module.css';
+import styles from './TodoPage.module.css';
 
-const Home = () => {
-  const { todos, addTodo, completeTodo, removeTodo } = useContext(TodoContext);
+const TodoPage = () => {
+  const { todos, addTodo, completeTodo, removeTodo } = useTodo();
   const [search, setSearch] = useState('');
   const [filter, setFilter] = useState('All');
 
@@ -16,6 +17,18 @@ const Home = () => {
 
   const totalTasks = todos.length;
   const completedTasks = todos.filter((todo) => todo.isCompleted).length;
+
+  let content;
+  if (!todos.length) content = <EmptyState message="Lista de tarefas vazia." />;
+  else {
+    content = (
+      <TodoList
+        todos={filteredTodos}
+        completeTodo={completeTodo}
+        removeTodo={removeTodo}
+      />
+    );
+  }
 
   return (
     <>
@@ -32,13 +45,9 @@ const Home = () => {
         completedTasks={completedTasks}
       />
 
-      <TodoList
-        todos={filteredTodos}
-        completeTodo={completeTodo}
-        removeTodo={removeTodo}
-      />
+      {content}
     </>
   );
 };
 
-export default Home;
+export default TodoPage;
