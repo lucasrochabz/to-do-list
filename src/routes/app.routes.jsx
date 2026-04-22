@@ -7,8 +7,12 @@ export const routes = [
   {
     element: <MainLayout />,
     children: [
-      { path: '/', element: <TodoPage /> },
-      { path: '/trash', element: <TrashPage /> },
+      { path: '/', element: <TodoPage />, handle: { title: 'Suas tarefas' } },
+      {
+        path: '/trash',
+        element: <TrashPage />,
+        handle: { title: 'Lixeira' },
+      },
     ],
   },
 ];

@@ -6,7 +6,6 @@ import { Search } from '@/components/Search';
 import { Filter } from '@/components/Filter';
 import { EmptyState } from '@/components/EmptyState';
 import { TodoList } from '@/components/TodoList';
-import styles from './TodoPage.module.css';
 
 const TodoPage = () => {
   const { todos, addTodo, completeTodo, removeTodo } = useTodo();
@@ -32,8 +31,6 @@ const TodoPage = () => {
 
   return (
     <>
-      <h1 className={styles.title}>Suas tarefas</h1>
-
       <TodoForm addTodo={addTodo} />
 
       <Search search={search} setSearch={setSearch} />
