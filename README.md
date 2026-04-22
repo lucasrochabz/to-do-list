@@ -87,3 +87,5 @@ to-do-list/
 ### Anotações
 
 - add depois framer-motion
+- ilustrações para tarefas: No data, Morning Plans, Inbox cleanup, Done, To do list
+- ilustrações para lixeira: Throw away, Clean up
