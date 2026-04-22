@@ -1,28 +1,36 @@
 import { useState } from 'react';
-import { mockTodos } from '@/mocks/todos';
-import { useTodos } from '@/hooks/useTodos';
+import { useTodo } from '@/contexts/useTodo';
 import { filterTodos } from '@/utils/filterTodos';
 import { TodoForm } from '@/components/TodoForm';
 import { Search } from '@/components/Search';
 import { Filter } from '@/components/Filter';
+import { EmptyState } from '@/components/EmptyState';
 import { TodoList } from '@/components/TodoList';
-import styles from './Home.module.css';
 
-const Home = () => {
-  const { todos, addTodo, completeTodo, removeTodo } = useTodos(mockTodos);
-
+const TodoPage = () => {
+  const { todos, addTodo, completeTodo, removeTodo } = useTodo();
   const [search, setSearch] = useState('');
   const [filter, setFilter] = useState('All');
 
   const filteredTodos = filterTodos(todos, filter, search);
 
-  const tasks = todos.length;
+  const totalTasks = todos.length;
   const completedTasks = todos.filter((todo) => todo.isCompleted).length;
+
+  let content;
+  if (!todos.length) content = <EmptyState message="Lista de tarefas vazia." />;
+  else {
+    content = (
+      <TodoList
+        todos={filteredTodos}
+        completeTodo={completeTodo}
+        removeTodo={removeTodo}
+      />
+    );
+  }
 
   return (
     <>
-      <h1 className={styles.title}>Suas tarefas</h1>
-
       <TodoForm addTodo={addTodo} />
 
       <Search search={search} setSearch={setSearch} />
@@ -30,17 +38,13 @@ const Home = () => {
       <Filter
         filter={filter}
         setFilter={setFilter}
-        tasks={tasks}
+        totalTasks={totalTasks}
         completedTasks={completedTasks}
       />
 
-      <TodoList
-        todos={filteredTodos}
-        completeTodo={completeTodo}
-        removeTodo={removeTodo}
-      />
+      {content}
     </>
   );
 };
 
-export default Home;
+export default TodoPage;

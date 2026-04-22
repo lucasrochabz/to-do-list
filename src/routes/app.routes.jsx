@@ -1,13 +1,18 @@
 import { MainLayout } from '@/components/MainLayout';
-import { Bin } from '@/pages/Bin';
-import { Home } from '@/pages/Home';
+import { TodoPage } from '@/pages/TodoPage';
+import { TrashPage } from '@/pages/TrashPage';
 
+// fix: add NotFound
 export const routes = [
   {
     element: <MainLayout />,
     children: [
-      { path: '/', element: <Home /> },
-      { path: '/bin', element: <Bin /> },
+      { path: '/', element: <TodoPage />, handle: { title: 'Suas tarefas' } },
+      {
+        path: '/trash',
+        element: <TrashPage />,
+        handle: { title: 'Lixeira' },
+      },
     ],
   },
 ];

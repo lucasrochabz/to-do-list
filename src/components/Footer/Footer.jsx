@@ -1,10 +1,10 @@
 import { NavLink } from 'react-router-dom';
-import { SquareCheck, Trash } from 'lucide-react';
+import { SquareCheck, Trash2 } from 'lucide-react';
 import styles from './Footer.module.css';
 
 const Footer = () => {
   const getNavClass = ({ isActive }) => {
-    return `${styles.link} ${isActive ? styles.active : undefined}`;
+    return `${styles.link} ${isActive ? styles.active : ''}`;
   };
 
   return (
@@ -15,8 +15,8 @@ const Footer = () => {
           <span>Tarefas</span>
         </NavLink>
 
-        <NavLink to="/bin" className={getNavClass}>
-          <Trash />
+        <NavLink to="/trash" className={getNavClass}>
+          <Trash2 />
           <span>Lixeira</span>
         </NavLink>
       </nav>
