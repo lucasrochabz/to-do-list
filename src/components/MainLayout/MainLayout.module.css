@@ -4,17 +4,12 @@
   width: 100%;
   overflow: auto;
   /* scrollbar-width: none; */
-  padding: 2rem;
+  padding: var(--space-xl);
   margin: 0 auto;
-}
-
-.title {
-  margin-bottom: 2rem;
-  text-align: left;
 }
 
 @media (max-width: 800px) {
   .app {
-    padding: 1.5rem;
+    padding: var(--space-lg);
   }
 }

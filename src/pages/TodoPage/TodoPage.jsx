@@ -5,6 +5,7 @@ import { TodoForm } from '@/components/TodoForm';
 import { Search } from '@/components/Search';
 import { Filter } from '@/components/Filter';
 import { EmptyState } from '@/components/EmptyState';
+import emptyTasks from '@/assets/illustrations/no-data.svg';
 import { TodoList } from '@/components/TodoList';
 
 const TodoPage = () => {
@@ -18,7 +19,14 @@ const TodoPage = () => {
   const completedTasks = todos.filter((todo) => todo.isCompleted).length;
 
   let content;
-  if (!todos.length) content = <EmptyState message="Lista de tarefas vazia." />;
+  if (!todos.length)
+    content = (
+      <EmptyState
+        image={emptyTasks}
+        title="Lista de tarefas vazia"
+        description="Suas tarefas aparecerão aqui."
+      />
+    );
   else {
     content = (
       <TodoList

@@ -1,0 +1,27 @@
+:root {
+  --font-size-xs: 0.75rem;   /* 12px */
+  --font-size-sm: 0.875rem;  /* 14px */
+  --font-size-md: 1rem;      /* 16px */
+  --font-size-lg: 1.125rem;  /* 18px */
+  --font-size-xl: 2rem;      /* 32px */
+
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+
+  /* --font-size-button: var(--font-size-sm); */
+  /* --font-size-input: var(--font-size-md); */
+}
+
+html {
+  font-family: 'Roboto', sans-serif;
+}
+
+h1, h2, a, span, button {
+  font-family: 'Poppins', sans-serif;
+}
+
+.title {
+  text-align: left;
+  margin-bottom: var(--space-xl);
+}

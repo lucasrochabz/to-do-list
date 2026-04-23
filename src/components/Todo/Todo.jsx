@@ -9,7 +9,7 @@ const Todo = ({ todo, completeTodo, removeTodo }) => {
     <li className={`${styles.todo} ${completedClass}`}>
       <p>{todo.text}</p>
 
-      <div className={styles.buttons}>
+      <div className={styles.actions}>
         <Button variant="icon" onClick={() => completeTodo(todo.id)}>
           <Check strokeWidth={1} />
         </Button>

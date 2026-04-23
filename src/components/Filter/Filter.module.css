@@ -1,14 +1,14 @@
 .filter {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 1rem;
+  margin-bottom: var(--space-md);
 }
 
 .filter nav {
   display: flex;
-  gap: 0.5rem;
+  gap: var(--space-sm);
 }
 
 .filter button, .filter span {
-  font-size: 14px;
+  font-size: var(--font-size-sm);
 }

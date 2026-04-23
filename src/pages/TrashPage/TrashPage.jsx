@@ -1,5 +1,6 @@
 import { useTodo } from '@/contexts/useTodo';
 import { EmptyState } from '@/components/EmptyState';
+import emptyTrash from '@/assets/illustrations/clean-up.svg';
 import { Button } from '@/components/Button';
 import { TrashList } from '@/components/TrashList';
 
@@ -7,7 +8,14 @@ const TrashPage = () => {
   const { trash, clearTrash, restoreTodo, deleteForever } = useTodo();
 
   let content;
-  if (!trash.length) content = <EmptyState message="Lixeira vazia" />;
+  if (!trash.length)
+    content = (
+      <EmptyState
+        image={emptyTrash}
+        title="Lixeira vazia"
+        description="Os itens excluídos aparecerão aqui."
+      />
+    );
   else {
     content = (
       <section>

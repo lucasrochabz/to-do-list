@@ -9,7 +9,7 @@ const TrashList = ({ trash, restoreTodo, deleteForever }) => {
         <li key={item.id}>
           <p>{item.text}</p>
 
-          <div>
+          <div className={styles.actions}>
             <Button variant="icon" onClick={() => restoreTodo(item.id)}>
               <RotateCcw strokeWidth={1} />
             </Button>

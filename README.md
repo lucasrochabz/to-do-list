@@ -1,38 +1,63 @@
-# To-do list
+## To-Do List
 
-- React + Vite
-- Estrutura de pastas escalável
-- Pronto para proteção de rotas
-- Abstração de client HTTP
-- Suporte a schemas de validação
-- Pronto para API de Contexto
-- Suporte a módulos CSS
-- Importações de alias configuradas
+<p align="center">
+  <img src="docs/images/todo-mobile.png" width="250px" />
+  <img src="docs/images/trash-mobile.png" width="250px" />
+</p>
 
-### Requisitos funcionais
+### Sobre
 
-- [ ] Criar, Editar, Excluir tarefas
-- [ ] Marcar como concluída
-- [ ] Filtrar tarefas
-- [ ] Ordenar tarefas
-- [ ] Persistir dados via API
+Este é um projeto de lista de tarefas (To-Do List) desenvolvido com React e Vite, utilizando arquitetura SPA (Single Page Application). A aplicação permite criar, editar, concluir, restaurar e excluir tarefas, além de oferecer filtros, busca e lixeira para gerenciamento completo das atividades.
 
-### Requisitos não funcionais
+O estado global é gerenciado com Context API combinada com custom hooks, garantindo uma estrutura organizada e escalável. As tarefas são persistidas no localStorage, permitindo manter os dados mesmo após recarregar a aplicação. A navegação é feita com React Router.
 
-- [ ] Interface responsiva
-- [ ] Performance otimizada
-- [ ] Validação de dados
-- [ ] Tratamento de erros
-- [ ] Código modular e tipado
-- [ ] Acessibilidade básica
+### Preview
+
+Acesse o projeto online:
+https://todolistlucas.vercel.app/
+
+### Tecnologias
+
+| Tecnologia   | Descrição                |
+| ------------ | ------------------------ |
+| JavaScript   | Linguagem de programação |
+| React        | Biblioteca de UI         |
+| React Router | Rotas na aplicação       |
+| Context API  | Gerenciamento de estado  |
+| Vite         | Build tool               |
+| HTML         | Estrutura de páginas     |
+| CSS Modules  | Estilos modulares        |
+
+### Requisitos
+
+- Node na versão 20.19 ou superior
+- NPM na versão 10 ou superior.
+
+### Como instalar?
+
+1. Faça o clone do projeto.
+2. Abra o terminal e navegue até a pasta do projeto.
+3. Instale as dependências usando o comando:
+   ```bash
+   npm install
+   ```
+4. Inicie o servidor localmente com o comando:
+   ```bash
+   npm run dev
+   ```
 
 ### Estrutura do projeto
 
 ```bash
 to-do-list/
+├── docs/
+│   └── images/
+│
 ├── public/
 ├── src/
 │   ├── assets/
+│   │   └── illustrations/
+│   │
 │   ├── components/
 │   │   ├── Button/
 │   │   ├── EmptyState/
@@ -66,6 +91,7 @@ to-do-list/
 │   │
 │   ├── styles/
 │   │   ├── animations/
+│   │   ├── tokens/
 │   │   └── index.css
 │   │
 │   ├── utils/
@@ -80,9 +106,10 @@ to-do-list/
 ├── package-lock.json
 ├── package.json
 ├── README.md
+├── vercel.json
 └── vite.config.js
 ```
 
-### Anotações
+### Encontrou algum problema?
 
-- add depois framer-motion
+Abra uma [issue](https://github.com/lucasrochabz/to-do-list/issues) com sua sugestão ou crítica.

@@ -1,0 +1,29 @@
+.notFound {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: var(--space-xl);
+}
+
+.notFound img {
+  width: 220px;
+  margin-bottom: var(--space-xl);
+}
+
+.notFound p {
+  margin-bottom: var(--space-xl);
+}
+
+.notFound a {
+  background-color: var(--color-primary);
+  color: var(--color-secondary);
+  border-radius: var(--radius-sm);
+  padding: 0.5rem 1rem;
+}
+
+@media (max-width: 800px) {
+  .notFound {
+    margin: var(--space-lg);
+  }
+}

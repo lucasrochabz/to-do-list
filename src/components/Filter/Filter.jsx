@@ -4,8 +4,8 @@ import styles from './Filter.module.css';
 const Filter = ({ filter, setFilter, totalTasks, completedTasks }) => {
   const filters = [
     { label: 'Todas', value: 'All' },
-    { label: 'Completas', value: 'Completed' },
-    { label: 'Incompletas', value: 'Incomplete' },
+    { label: 'A fazer', value: 'To-do' },
+    { label: 'Feitas', value: 'Done' },
   ];
 
   return (
