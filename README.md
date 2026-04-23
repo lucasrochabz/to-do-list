@@ -9,7 +9,7 @@
 
 Este é um projeto de lista de tarefas (To-Do List) desenvolvido com React e Vite, utilizando arquitetura SPA (Single Page Application). A aplicação permite criar, editar, concluir, restaurar e excluir tarefas, além de oferecer filtros, busca e lixeira para gerenciamento completo das atividades.
 
-O estado global é gerenciado com Context API combinada com custom hooks, garantindo uma estrutura organizada e escalável. A navegação é feita com React Router.
+O estado global é gerenciado com Context API combinada com custom hooks, garantindo uma estrutura organizada e escalável. As tarefas são persistidas no localStorage, permitindo manter os dados mesmo após recarregar a aplicação. A navegação é feita com React Router.
 
 ### Preview
 
