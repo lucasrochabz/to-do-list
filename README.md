@@ -1,5 +1,8 @@
 ## To-Do List
 
+![Tarefas](docs/images/todo-mobile.png)
+![Lixeira](docs/images/trash-mobile.png)
+
 ### Sobre
 
 Este é um projeto de lista de tarefas (To-Do List) desenvolvido com React e Vite, utilizando arquitetura SPA (Single Page Application). A aplicação permite criar, editar, concluir, restaurar e excluir tarefas, além de oferecer filtros, busca e lixeira para gerenciamento completo das atividades.
@@ -46,6 +49,8 @@ https://todolistlucas.vercel.app/
 ```bash
 to-do-list/
 ├── docs/
+│   └── images/
+│
 ├── public/
 ├── src/
 │   ├── assets/
