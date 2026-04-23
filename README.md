@@ -1,8 +1,8 @@
 ## To-Do List
 
 <p align="center">
-  <img src="docs/images/todo-mobile.png" />
-  <img src="docs/images/trash-mobile.png" />
+  <img src="docs/images/todo-mobile.png" width="250px" />
+  <img src="docs/images/trash-mobile.png" width="250px" />
 </p>
 
 ### Sobre
