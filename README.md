@@ -1,7 +1,9 @@
 ## To-Do List
 
-![Tarefas](docs/images/todo-mobile.png)
-![Lixeira](docs/images/trash-mobile.png)
+<p align="center">
+  <img src="docs/images/todo-mobile.png" />
+  <img src="docs/images/trash-mobile.png" />
+</p>
 
 ### Sobre
 
