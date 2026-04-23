@@ -6,6 +6,11 @@ Este é um projeto de lista de tarefas (To-Do List) desenvolvido com React e Vit
 
 O estado global é gerenciado com Context API combinada com custom hooks, garantindo uma estrutura organizada e escalável. A navegação é feita com React Router.
 
+### Preview
+
+Acesse o projeto online:
+https://todolistlucas.vercel.app/
+
 ### Tecnologias
 
 | Tecnologia   | Descrição                |
@@ -40,9 +45,12 @@ O estado global é gerenciado com Context API combinada com custom hooks, garant
 
 ```bash
 to-do-list/
+├── docs/
 ├── public/
 ├── src/
 │   ├── assets/
+│   │   └── illustrations/
+│   │
 │   ├── components/
 │   │   ├── Button/
 │   │   ├── EmptyState/
@@ -91,6 +99,7 @@ to-do-list/
 ├── package-lock.json
 ├── package.json
 ├── README.md
+├── vercel.json
 └── vite.config.js
 ```
 
