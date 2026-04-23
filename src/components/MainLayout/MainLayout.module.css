@@ -4,12 +4,12 @@
   width: 100%;
   overflow: auto;
   /* scrollbar-width: none; */
-  padding: var(--sapce-xl);
+  padding: var(--space-xl);
   margin: 0 auto;
 }
 
 @media (max-width: 800px) {
   .app {
-    padding: var(--sapce-lg);
+    padding: var(--space-lg);
   }
 }

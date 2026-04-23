@@ -5,7 +5,7 @@ import { TodoForm } from '@/components/TodoForm';
 import { Search } from '@/components/Search';
 import { Filter } from '@/components/Filter';
 import { EmptyState } from '@/components/EmptyState';
-import emptyTasks from '@/assets/illustrations/undraw_no-data.svg';
+import emptyTasks from '@/assets/illustrations/no-data.svg';
 import { TodoList } from '@/components/TodoList';
 
 const TodoPage = () => {

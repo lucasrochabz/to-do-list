@@ -1,5 +1,5 @@
 .todoList {
   display: flex;
   flex-direction: column;
-  gap: var(--sapce-md);
+  gap: var(--space-md);
 }

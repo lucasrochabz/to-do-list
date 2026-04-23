@@ -1,8 +1,8 @@
 import { MainLayout } from '@/components/MainLayout';
 import { TodoPage } from '@/pages/TodoPage';
 import { TrashPage } from '@/pages/TrashPage';
+import { NotFound } from '@/pages/NotFound';
 
-// fix: add NotFound
 export const routes = [
   {
     element: <MainLayout />,
@@ -15,4 +15,5 @@ export const routes = [
       },
     ],
   },
+  { path: '*', element: <NotFound /> },
 ];

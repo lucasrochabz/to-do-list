@@ -23,5 +23,5 @@ h1, h2, a, span, button {
 
 .title {
   text-align: left;
-  margin-bottom: var(--sapce-xl);
+  margin-bottom: var(--space-xl);
 }

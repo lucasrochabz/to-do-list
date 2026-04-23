@@ -16,7 +16,7 @@
   flex-direction: column;
   font-size: var(--font-size-sm);
   align-items: center;
-  gap: var(--sapce-xs);
+  gap: var(--space-xs);
   opacity: 0.7;
 }
 
