@@ -71,15 +71,15 @@ to-do-list/
 │   │   └── TrashList/
 │   │
 │   ├── constants/
-│   │   └── storageKeys.js
+│   │   └── storageKeys.ts
 │   │
 │   ├── contexts/
-│   │   ├── TodoContext.js
-│   │   ├── TodoProvider.jsx
-│   │   └── useTodo.js
+│   │   ├── TodoContext.ts
+│   │   ├── TodoProvider.tsx
+│   │   └── useTodo.ts
 │   │
 │   ├── mocks/
-│   │   └── todos.js
+│   │   └── todos.ts
 │   │
 │   ├── pages/
 │   │   ├── NotFound/
@@ -87,27 +87,28 @@ to-do-list/
 │   │   └── TrashPage/
 │   │
 │   ├── routes/
-│   │   └── app.routes.jsx
+│   │   └── app.routes.tsx
 │   │
 │   ├── styles/
 │   │   ├── animations/
 │   │   ├── tokens/
 │   │   └── index.css
 │   │
+│   ├── types/
 │   ├── utils/
-│   ├── App.jsx
-│   └── main.jsx
+│   ├── App.tsx
+│   └── main.tsx
 │
 ├── .env.example
 ├── .gitignore
 ├── eslint.config.js
 ├── index.html
-├── jsconfig.json
 ├── package-lock.json
 ├── package.json
 ├── README.md
+├── tsconfig.json
 ├── vercel.json
-└── vite.config.js
+└── vite.config.ts
 ```
 
 ### Encontrou algum problema?
