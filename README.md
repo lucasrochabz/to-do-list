@@ -20,7 +20,7 @@ https://todolistlucas.vercel.app/
 
 | Tecnologia   | Descrição                |
 | ------------ | ------------------------ |
-| JavaScript   | Linguagem de programação |
+| TypeScript   | Linguagem de programação |
 | React        | Biblioteca de UI         |
 | React Router | Rotas na aplicação       |
 | Context API  | Gerenciamento de estado  |
