@@ -4,6 +4,7 @@ node_modules
 # Build outputs
 dist
 dist-ssr
+tsconfig.tsbuildinfo
 
 # Local overrides
 *.local
