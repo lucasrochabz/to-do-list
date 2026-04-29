@@ -5,3 +5,8 @@ export interface ITodo {
 }
 
 export type TodoFilter = 'All' | 'Done' | 'To-do';
+
+export type FilterItem = {
+  label: string;
+  value: TodoFilter;
+};

@@ -1,9 +1,9 @@
-import { NavLink } from 'react-router-dom';
+import { NavLink, NavLinkProps } from 'react-router-dom';
 import { SquareCheck, Trash2 } from 'lucide-react';
 import styles from './Footer.module.css';
 
 const Footer = () => {
-  const getNavClass = ({ isActive }) => {
+  const getNavClass: NavLinkProps['className'] = ({ isActive }) => {
     return `${styles.link} ${isActive ? styles.active : ''}`;
   };
 

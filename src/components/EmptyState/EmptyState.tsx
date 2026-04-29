@@ -1,6 +1,12 @@
 import styles from './EmptyState.module.css';
 
-const EmptyState = ({ image, title, description }) => {
+type EmptyStateProps = {
+  image: string;
+  title: string;
+  description: string;
+}
+
+const EmptyState = ({ image, title, description }: EmptyStateProps) => {
   return (
     <section className={styles.container}>
       <img src={image} alt="" aria-hidden="true" className={styles.image} />

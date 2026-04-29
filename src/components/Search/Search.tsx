@@ -1,6 +1,11 @@
 import styles from './Search.module.css';
 
-const Search = ({ search, setSearch }) => {
+type SearchProps = {
+  search: string;
+  setSearch: (value: string) => void;
+};
+
+const Search = ({ search, setSearch }: SearchProps) => {
   return (
     <section className={styles.search}>
       <label htmlFor="search" className="sr-only">
