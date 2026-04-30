@@ -1,12 +1,10 @@
-import { TodoType } from '@/types/types';
+import { TodoType, TodoActions } from '@/types/types';
 import { Todo } from '@/components/Todo';
 import styles from './TodoList.module.css';
 
 type TodoListProps = {
   todos: TodoType[];
-  completeTodo: (id: number) => void;
-  removeTodo: (id: number) => void;
-};
+} & TodoActions;
 
 const TodoList = ({ todos, completeTodo, removeTodo }: TodoListProps) => {
   return (

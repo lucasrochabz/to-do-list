@@ -1,13 +1,11 @@
 import { Check, X } from 'lucide-react';
-import { TodoType } from '@/types/types';
+import { TodoType, TodoActions } from '@/types/types';
 import { Button } from '@/components/Button';
 import styles from './Todo.module.css';
 
 type TodoProps = {
   todo: TodoType;
-  completeTodo: (id: number) => void;
-  removeTodo: (id: number) => void;
-};
+} & TodoActions;
 
 const Todo = ({ todo, completeTodo, removeTodo }: TodoProps) => {
   const completedClass = todo.isCompleted ? styles.todoCompleted : '';

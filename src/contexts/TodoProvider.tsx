@@ -6,6 +6,7 @@ import { TodoContext, TodoContextType } from './TodoContext';
 
 // fix: add useMemo no value
 // fix: add useCallback nas actions
+// fix: observar o JSON.parse()... pois pode quebrar tipagem
 type TodoProviderProps = {
   children: ReactNode;
 };

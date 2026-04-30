@@ -7,11 +7,12 @@ import { Filter } from '@/components/Filter';
 import { EmptyState } from '@/components/EmptyState';
 import emptyTasks from '@/assets/illustrations/no-data.svg';
 import { TodoList } from '@/components/TodoList';
+import { TodoFilter } from '@/types/types';
 
 const TodoPage = () => {
   const { todos, addTodo, completeTodo, removeTodo } = useTodo();
   const [search, setSearch] = useState('');
-  const [filter, setFilter] = useState('All');
+  const [filter, setFilter] = useState<TodoFilter>('All');
 
   const filteredTodos = filterTodos(todos, filter, search);
 

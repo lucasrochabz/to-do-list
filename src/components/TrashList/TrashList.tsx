@@ -1,13 +1,11 @@
 import { Trash2, RotateCcw } from 'lucide-react';
-import { TodoType } from '@/types/types';
+import { TodoType, TodoActions, TrashActions } from '@/types/types';
 import { Button } from '@/components/Button';
 import styles from './TrashList.module.css';
 
 type TrashListProps = {
   trash: TodoType[];
-  restoreTodo: (id: number) => void;
-  deleteForever: (id: number) => void;
-};
+} & TrashActions;
 
 const TrashList = ({ trash, restoreTodo, deleteForever }: TrashListProps) => {
   return (
