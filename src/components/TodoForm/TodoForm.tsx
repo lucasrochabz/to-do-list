@@ -2,10 +2,14 @@ import { useState } from 'react';
 import { Button } from '@/components/Button';
 import styles from './TodoForm.module.css';
 
-const TodoForm = ({ addTodo }) => {
+type TodoFormProps = {
+  addTodo: (text: string) => void;
+};
+
+const TodoForm = ({ addTodo }: TodoFormProps) => {
   const [value, setValue] = useState('');
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
     if (!value) return;

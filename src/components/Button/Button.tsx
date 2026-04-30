@@ -1,8 +1,9 @@
 import { ButtonHTMLAttributes, ReactNode } from 'react';
+import { VariantTypes } from '@/types/types';
 import styles from './Button.module.css';
 
 type ButtonProps = {
-  variant?: 'primary' | 'secondary';
+  variant?: VariantTypes;
   children: ReactNode;
 } & ButtonHTMLAttributes<HTMLButtonElement>;
 

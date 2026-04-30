@@ -16,3 +16,5 @@ export type FilterItem = {
   label: string;
   value: TodoFilter;
 };
+
+export type VariantTypes = 'primary' | 'icon' | 'filterOptions' | 'active';

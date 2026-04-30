@@ -1,4 +1,10 @@
-export const filterTodos = (todos, filter, search) => {
+import { TodoFilter, TodoType } from '@/types/types';
+
+export const filterTodos = (
+  todos: TodoType[],
+  filter: TodoFilter,
+  search: string,
+) => {
   return todos
     .filter((todo) => {
       if (filter === 'Done') return todo.isCompleted;
