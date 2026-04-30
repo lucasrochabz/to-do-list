@@ -4,6 +4,12 @@ export interface ITodo {
   isCompleted: boolean;
 }
 
+export type TodoType = {
+  id: number;
+  text: string;
+  isCompleted: boolean;
+};
+
 export type TodoFilter = 'All' | 'Done' | 'To-do';
 
 export type FilterItem = {
