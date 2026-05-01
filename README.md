@@ -11,19 +11,19 @@ Este é um projeto de lista de tarefas (To-Do List) desenvolvido com React e Vit
 
 O estado global é gerenciado com Context API combinada com custom hooks, garantindo uma estrutura organizada e escalável. As tarefas são persistidas no localStorage, permitindo manter os dados mesmo após recarregar a aplicação. A navegação é feita com React Router.
 
+### Funcionalidades
+
+- [x] Criar, editar e excluir tarefas
+- [x] Marcar tarefas como concluídas
+- [x] Sistema de busca
+- [x] Filtros por status
+- [x] Lixeira com restauração
+- [x] Persistência de dados no localStorage
+
 ### Preview
 
 Acesse o projeto online:
 https://todolistlucas.vercel.app/
-
-### Funcionalidades
-
-- Criar, editar e excluir tarefas
-- Marcar tarefas como concluídas
-- Sistema de busca
-- Filtros por status
-- Lixeira com restauração
-- Persistência de dados no localStorage
 
 ### Tecnologias
 
