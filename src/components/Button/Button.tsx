@@ -1,9 +1,9 @@
 import { ButtonHTMLAttributes, ReactNode } from 'react';
-import { VariantTypes } from '@/types/types';
+import { ButtonVariant } from '@/types/button';
 import styles from './Button.module.css';
 
 type ButtonProps = {
-  variant?: VariantTypes;
+  variant?: ButtonVariant;
   children: ReactNode;
 } & ButtonHTMLAttributes<HTMLButtonElement>;
 

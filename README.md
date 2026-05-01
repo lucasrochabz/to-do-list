@@ -16,6 +16,15 @@ O estado global é gerenciado com Context API combinada com custom hooks, garant
 Acesse o projeto online:
 https://todolistlucas.vercel.app/
 
+### Funcionalidades
+
+- Criar, editar e excluir tarefas
+- Marcar tarefas como concluídas
+- Sistema de busca
+- Filtros por status
+- Lixeira com restauração
+- Persistência de dados no localStorage
+
 ### Tecnologias
 
 | Tecnologia   | Descrição                |
@@ -71,7 +80,8 @@ to-do-list/
 │   │   └── TrashList/
 │   │
 │   ├── constants/
-│   │   └── storageKeys.ts
+│   │   ├── storageKeys.ts
+│   │   └── todoFilter.ts
 │   │
 │   ├── contexts/
 │   │   ├── TodoContext.ts
@@ -95,10 +105,13 @@ to-do-list/
 │   │   └── index.css
 │   │
 │   ├── types/
-│   │   └── types.ts
+│   │   ├── button.ts
+│   │   ├── todo.ts
+│   │   └── trash.ts
 │   │
 │   ├── utils/
 │   ├── App.tsx
+│   ├── env.d.ts
 │   └── main.tsx
 │
 ├── .env.example

@@ -1,4 +1,4 @@
-import { TodoType, TodoActions } from '@/types/types';
+import { TodoType, TodoActions } from '@/types/todo';
 import { Todo } from '@/components/Todo';
 import styles from './TodoList.module.css';
 

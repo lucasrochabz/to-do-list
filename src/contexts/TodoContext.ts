@@ -1,5 +1,5 @@
 import { createContext } from 'react';
-import { TodoType } from '@/types/types';
+import { TodoType } from '@/types/todo';
 
 export type TodoContextType = {
   todos: TodoType[];

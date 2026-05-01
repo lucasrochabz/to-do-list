@@ -1,4 +1,4 @@
-import { TodoType } from '@/types/types';
+import { TodoType } from '@/types/todo';
 import { TodoFilter } from '@/constants/todoFilter';
 
 export const filterTodos = (

@@ -1,5 +1,5 @@
 import { ReactNode, useEffect, useState } from 'react';
-import { TodoType } from '@/types/types';
+import { TodoType } from '@/types/todo';
 import { STORAGE_KEYS } from '@/constants/storageKeys';
 import { mockTodos } from '@/mocks/todos';
 import { TodoContext, TodoContextType } from './TodoContext';

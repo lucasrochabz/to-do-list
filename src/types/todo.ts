@@ -8,10 +8,3 @@ export type TodoActions = {
   completeTodo: (id: string) => void;
   removeTodo: (id: string) => void;
 };
-
-export type TrashActions = {
-  restoreTodo: (id: string) => void;
-  deleteForever: (id: string) => void;
-};
-
-export type VariantTypes = 'primary' | 'icon' | 'disabled' | 'active';

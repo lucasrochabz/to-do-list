@@ -1,5 +1,6 @@
 import { Trash2, RotateCcw } from 'lucide-react';
-import { TodoType, TodoActions, TrashActions } from '@/types/types';
+import { TodoType } from '@/types/todo';
+import { TrashActions } from '@/types/trash';
 import { Button } from '@/components/Button';
 import styles from './TrashList.module.css';
 

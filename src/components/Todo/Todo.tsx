@@ -1,5 +1,5 @@
 import { Check, X } from 'lucide-react';
-import { TodoType, TodoActions } from '@/types/types';
+import { TodoType, TodoActions } from '@/types/todo';
 import { Button } from '@/components/Button';
 import styles from './Todo.module.css';
 
