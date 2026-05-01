@@ -1,4 +1,4 @@
-import { TodoFilter, FilterItem } from '@/types/types';
+import { FILTER_OPTIONS, TodoFilter } from '@/constants/todoFilter';
 import { Button } from '@/components/Button';
 import styles from './Filter.module.css';
 
@@ -9,12 +9,6 @@ type FilterProps = {
   completedTasks: number;
 };
 
-const filters: FilterItem[] = [
-  { label: 'Todas', value: 'All' },
-  { label: 'A fazer', value: 'To-do' },
-  { label: 'Feitas', value: 'Done' },
-];
-
 const Filter = ({
   filter,
   setFilter,
@@ -24,10 +18,10 @@ const Filter = ({
   return (
     <section className={styles.filter}>
       <nav>
-        {filters.map(({ label, value }) => (
+        {FILTER_OPTIONS.map(({ label, value }) => (
           <Button
             key={value}
-            variant={filter === value ? 'active' : 'filterOptions'}
+            variant={filter === value ? 'active' : 'disabled'}
             value={value}
             onClick={() => setFilter(value)}
           >

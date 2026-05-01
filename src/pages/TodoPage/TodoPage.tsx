@@ -1,18 +1,18 @@
 import { useState } from 'react';
+import emptyTasks from '@/assets/illustrations/no-data.svg';
 import { useTodo } from '@/contexts/useTodo';
+import { TodoFilter, TODO_FILTER } from '@/constants/todoFilter';
 import { filterTodos } from '@/utils/filterTodos';
 import { TodoForm } from '@/components/TodoForm';
 import { Search } from '@/components/Search';
 import { Filter } from '@/components/Filter';
 import { EmptyState } from '@/components/EmptyState';
-import emptyTasks from '@/assets/illustrations/no-data.svg';
 import { TodoList } from '@/components/TodoList';
-import { TodoFilter } from '@/types/types';
 
 const TodoPage = () => {
   const { todos, addTodo, completeTodo, removeTodo } = useTodo();
   const [search, setSearch] = useState('');
-  const [filter, setFilter] = useState<TodoFilter>('All');
+  const [filter, setFilter] = useState<TodoFilter>(TODO_FILTER.ALL);
 
   const filteredTodos = filterTodos(todos, filter, search);
 

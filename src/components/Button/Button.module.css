@@ -27,13 +27,13 @@
   background-color: rgba(0, 0, 0, 0.1);
 }
 
-.filterOptions {
+.disabled {
   border-radius: 0px;
   border-bottom: 2px solid transparent;
   padding-bottom: 0.125rem;
 }
 
-.filterOptions:hover {
+.disabled:hover {
   border-bottom: 2px solid var(--color-primary);
 }
 

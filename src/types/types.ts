@@ -14,11 +14,4 @@ export type TrashActions = {
   deleteForever: (id: string) => void;
 };
 
-export type TodoFilter = 'All' | 'Done' | 'To-do';
-
-export type FilterItem = {
-  label: string;
-  value: TodoFilter;
-};
-
-export type VariantTypes = 'primary' | 'icon' | 'filterOptions' | 'active';
+export type VariantTypes = 'primary' | 'icon' | 'disabled' | 'active';
