@@ -1,22 +1,28 @@
-import { useEffect, useState } from 'react';
+import { ReactNode, useEffect, useState } from 'react';
+import { TodoType } from '@/types/todo';
 import { STORAGE_KEYS } from '@/constants/storageKeys';
 import { mockTodos } from '@/mocks/todos';
-import { TodoContext } from './TodoContext';
+import { TodoContext, TodoContextType } from './TodoContext';
 
 // fix: add useMemo no value
 // fix: add useCallback nas actions
-export const TodoProvider = ({ children }) => {
-  const [todos, setTodos] = useState(() => {
+// fix: observar o JSON.parse()... pois pode quebrar tipagem
+type TodoProviderProps = {
+  children: ReactNode;
+};
+
+export const TodoProvider = ({ children }: TodoProviderProps) => {
+  const [todos, setTodos] = useState<TodoType[]>(() => {
     const stored = localStorage.getItem(STORAGE_KEYS.TODOS);
     return stored ? JSON.parse(stored) : mockTodos;
   });
 
-  const [trash, setTrash] = useState(() => {
+  const [trash, setTrash] = useState<TodoType[]>(() => {
     const stored = localStorage.getItem(STORAGE_KEYS.TRASH);
     return stored ? JSON.parse(stored) : [];
   });
 
-  const addTodo = (text) => {
+  const addTodo = (text: string) => {
     const newTodo = {
       id: crypto.randomUUID(),
       text,
@@ -26,7 +32,7 @@ export const TodoProvider = ({ children }) => {
     setTodos((prev) => [...prev, newTodo]);
   };
 
-  const completeTodo = (id) => {
+  const completeTodo = (id: string) => {
     setTodos((prev) =>
       prev.map((todo) =>
         todo.id === id ? { ...todo, isCompleted: !todo.isCompleted } : todo,
@@ -34,7 +40,7 @@ export const TodoProvider = ({ children }) => {
     );
   };
 
-  const removeTodo = (id) => {
+  const removeTodo = (id: string) => {
     const todoToRemove = todos.find((todo) => todo.id === id);
     if (!todoToRemove) return;
 
@@ -42,7 +48,7 @@ export const TodoProvider = ({ children }) => {
     setTrash((prev) => [...prev, todoToRemove]);
   };
 
-  const restoreTodo = (id) => {
+  const restoreTodo = (id: string) => {
     const todo = trash.find((item) => item.id === id);
     if (!todo) return;
 
@@ -50,7 +56,7 @@ export const TodoProvider = ({ children }) => {
     setTodos((prev) => [...prev, todo]);
   };
 
-  const deleteForever = (id) => {
+  const deleteForever = (id: string) => {
     setTrash((prev) => prev.filter((item) => item.id !== id));
   };
 
@@ -69,7 +75,7 @@ export const TodoProvider = ({ children }) => {
     localStorage.setItem(STORAGE_KEYS.TRASH, JSON.stringify(trash));
   }, [trash]);
 
-  const value = {
+  const value: TodoContextType = {
     todos,
     trash,
     addTodo,

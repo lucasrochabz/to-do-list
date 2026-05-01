@@ -1,11 +1,16 @@
-import { Outlet, useLocation, useMatches } from 'react-router-dom';
+import { Outlet, UIMatch, useLocation, useMatches } from 'react-router-dom';
 import { Footer } from '@/components/Footer';
 import styles from './MainLayout.module.css';
+
+type RouteHandle = {
+  title?: string;
+};
 
 const MainLayout = () => {
   const location = useLocation();
 
-  const matches = useMatches();
+  const matches = useMatches() as UIMatch<unknown, RouteHandle>[];
+
   const currentRoute = matches[matches.length - 1];
   const title = currentRoute.handle?.title;
 

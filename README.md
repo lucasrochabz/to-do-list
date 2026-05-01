@@ -11,6 +11,15 @@ Este é um projeto de lista de tarefas (To-Do List) desenvolvido com React e Vit
 
 O estado global é gerenciado com Context API combinada com custom hooks, garantindo uma estrutura organizada e escalável. As tarefas são persistidas no localStorage, permitindo manter os dados mesmo após recarregar a aplicação. A navegação é feita com React Router.
 
+### Funcionalidades
+
+- [x] Criar, editar e excluir tarefas
+- [x] Marcar tarefas como concluídas
+- [x] Sistema de busca
+- [x] Filtros por status
+- [x] Lixeira com restauração
+- [x] Persistência de dados no localStorage
+
 ### Preview
 
 Acesse o projeto online:
@@ -20,7 +29,7 @@ https://todolistlucas.vercel.app/
 
 | Tecnologia   | Descrição                |
 | ------------ | ------------------------ |
-| JavaScript   | Linguagem de programação |
+| TypeScript   | Linguagem de programação |
 | React        | Biblioteca de UI         |
 | React Router | Rotas na aplicação       |
 | Context API  | Gerenciamento de estado  |
@@ -71,15 +80,16 @@ to-do-list/
 │   │   └── TrashList/
 │   │
 │   ├── constants/
-│   │   └── storageKeys.js
+│   │   ├── storageKeys.ts
+│   │   └── todoFilter.ts
 │   │
 │   ├── contexts/
-│   │   ├── TodoContext.js
-│   │   ├── TodoProvider.jsx
-│   │   └── useTodo.js
+│   │   ├── TodoContext.ts
+│   │   ├── TodoProvider.tsx
+│   │   └── useTodo.ts
 │   │
 │   ├── mocks/
-│   │   └── todos.js
+│   │   └── todos.ts
 │   │
 │   ├── pages/
 │   │   ├── NotFound/
@@ -87,27 +97,33 @@ to-do-list/
 │   │   └── TrashPage/
 │   │
 │   ├── routes/
-│   │   └── app.routes.jsx
+│   │   └── app.routes.tsx
 │   │
 │   ├── styles/
 │   │   ├── animations/
 │   │   ├── tokens/
 │   │   └── index.css
 │   │
+│   ├── types/
+│   │   ├── button.ts
+│   │   ├── todo.ts
+│   │   └── trash.ts
+│   │
 │   ├── utils/
-│   ├── App.jsx
-│   └── main.jsx
+│   ├── App.tsx
+│   ├── env.d.ts
+│   └── main.tsx
 │
 ├── .env.example
 ├── .gitignore
 ├── eslint.config.js
 ├── index.html
-├── jsconfig.json
 ├── package-lock.json
 ├── package.json
 ├── README.md
+├── tsconfig.json
 ├── vercel.json
-└── vite.config.js
+└── vite.config.ts
 ```
 
 ### Encontrou algum problema?
