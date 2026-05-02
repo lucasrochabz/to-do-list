@@ -80,11 +80,12 @@ to-do-list/
 │   │   └── TrashList/
 │   │
 │   ├── constants/
+│   │   ├── routes.ts
 │   │   ├── storageKeys.ts
-│   │   └── todoFilter.ts
+│   │   └── todoFilters.ts
 │   │
 │   ├── contexts/
-│   │   ├── TodoContext.ts
+│   │   ├── routes.ts
 │   │   ├── TodoProvider.tsx
 │   │   └── useTodo.ts
 │   │

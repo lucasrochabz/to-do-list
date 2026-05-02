@@ -1,3 +1,4 @@
+import { ROUTES } from '@/constants/routes';
 import { MainLayout } from '@/components/MainLayout';
 import { TodoPage } from '@/pages/TodoPage';
 import { TrashPage } from '@/pages/TrashPage';
@@ -7,9 +8,13 @@ export const routes = [
   {
     element: <MainLayout />,
     children: [
-      { path: '/', element: <TodoPage />, handle: { title: 'Tarefas' } },
       {
-        path: '/trash',
+        path: ROUTES.HOME,
+        element: <TodoPage />,
+        handle: { title: 'Tarefas' },
+      },
+      {
+        path: ROUTES.TRASH,
         element: <TrashPage />,
         handle: { title: 'Lixeira' },
       },

@@ -1,10 +1,10 @@
-import { FILTER_OPTIONS, TodoFilter } from '@/constants/todoFilter';
+import { FILTER_OPTIONS, FilterType } from '@/constants/todoFilters';
 import { Button } from '@/components/Button';
 import styles from './Filter.module.css';
 
 type FilterProps = {
-  filter: TodoFilter;
-  setFilter: (value: TodoFilter) => void;
+  filter: FilterType;
+  setFilter: (value: FilterType) => void;
   totalTasks: number;
   completedTasks: number;
 };
