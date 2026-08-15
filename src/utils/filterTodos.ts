@@ -1,9 +1,9 @@
 import { TodoType } from '@/types/todo';
-import { TodoFilter } from '@/constants/todoFilter';
+import { FilterType } from '@/constants/todoFilters';
 
 export const filterTodos = (
   todos: TodoType[],
-  filter: TodoFilter,
+  filter: FilterType,
   search: string,
 ) => {
   return todos
