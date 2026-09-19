@@ -1,22 +1,17 @@
-## To-Do List
+# Taski
 
 <p align="center">
   <img src="docs/images/todo-mobile.png" width="250px" />
   <img src="docs/images/trash-mobile.png" width="250px" />
 </p>
 
-### Sobre
-
 Este é um projeto de lista de tarefas (To-Do List) desenvolvido com React e Vite, utilizando arquitetura SPA (Single Page Application). A aplicação permite criar, editar, concluir, restaurar e excluir tarefas, além de oferecer filtros, busca e lixeira para gerenciamento completo das atividades.
 
 O estado global é gerenciado com Context API combinada com custom hooks, garantindo uma estrutura organizada e escalável. As tarefas são persistidas no localStorage, permitindo manter os dados mesmo após recarregar a aplicação. A navegação é feita com React Router.
 
-### Preview
+**Acesse**: https://taskiapp.vercel.app/
 
-Acesse o projeto online:
-https://todolistlucas.vercel.app/
-
-### Funcionalidades
+## Funcionalidades
 
 - [x] Criar, editar e excluir tarefas
 - [x] Marcar tarefas como concluídas
@@ -25,7 +20,7 @@ https://todolistlucas.vercel.app/
 - [x] Lixeira com restauração
 - [x] Persistência de dados no localStorage
 
-### Tecnologias
+## Tecnologias
 
 | Tecnologia   | Descrição                |
 | ------------ | ------------------------ |
@@ -33,16 +28,16 @@ https://todolistlucas.vercel.app/
 | React        | Biblioteca de UI         |
 | React Router | Rotas na aplicação       |
 | Context API  | Gerenciamento de estado  |
-| Vite         | Build tool               |
+| Vite         | Ferramenta de Build      |
 | HTML         | Estrutura de páginas     |
 | CSS Modules  | Estilos modulares        |
 
-### Requisitos
+## Requisitos
 
-- Node na versão 20.19 ou superior
-- NPM na versão 10 ou superior.
+- **Node.js** 20.19 ou superior
+- **npm** 10 ou superior.
 
-### Como instalar?
+## Como executar
 
 1. Faça o clone do projeto.
 2. Abra o terminal e navegue até a pasta do projeto.
@@ -55,61 +50,28 @@ https://todolistlucas.vercel.app/
    npm run dev
    ```
 
-### Estrutura do projeto
+## Estrutura do projeto
 
 ```bash
 to-do-list/
 ├── docs/
-│   └── images/
-│
 ├── public/
 ├── src/
 │   ├── assets/
-│   │   └── illustrations/
-│   │
 │   ├── components/
 │   │   ├── Button/
-│   │   ├── EmptyState/
-│   │   ├── Filter/
-│   │   ├── Footer/
-│   │   ├── MainLayout/
-│   │   ├── Search/
-│   │   ├── Todo/
-│   │   ├── TodoForm/
-│   │   ├── TodoList/
-│   │   └── TrashList/
-│   │
-│   ├── constants/
-│   │   ├── routes.ts
-│   │   ├── storageKeys.ts
-│   │   └── todoFilters.ts
-│   │
-│   ├── contexts/
-│   │   ├── routes.ts
-│   │   ├── TodoProvider.tsx
-│   │   └── useTodo.ts
-│   │
-│   ├── mocks/
-│   │   └── todos.ts
+│   │   └── ...
 │   │
 │   ├── pages/
-│   │   ├── NotFound/
 │   │   ├── TodoPage/
-│   │   └── TrashPage/
+│   │   └── ...
 │   │
+│   ├── constants/
+│   ├── contexts/
+│   ├── mocks/
 │   ├── routes/
-│   │   └── app.routes.tsx
-│   │
 │   ├── styles/
-│   │   ├── animations/
-│   │   ├── tokens/
-│   │   └── index.css
-│   │
 │   ├── types/
-│   │   ├── button.ts
-│   │   ├── todo.ts
-│   │   └── trash.ts
-│   │
 │   ├── utils/
 │   ├── App.tsx
 │   ├── env.d.ts
@@ -127,6 +89,6 @@ to-do-list/
 └── vite.config.ts
 ```
 
-### Encontrou algum problema?
+## Encontrou algum problema?
 
 Abra uma [issue](https://github.com/lucasrochabz/to-do-list/issues) com sua sugestão ou crítica.
