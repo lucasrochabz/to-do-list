@@ -1,0 +1,11 @@
+html {
+  font-size: 100%;
+}
+
+body {
+  font-family: var(--font-family-base);
+}
+
+h1, h2, a, span, button {
+  font-family: var(--font-family-heading);
+}
