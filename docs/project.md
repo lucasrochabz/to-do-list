@@ -1,7 +1,7 @@
 ### Estrutura do projeto
 
 ```bash
-to-do-list/
+taski/
 ├── docs/
 │   └── images/
 │
