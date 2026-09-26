@@ -53,7 +53,7 @@ O estado global é gerenciado com Context API combinada com custom hooks, garant
 ## Estrutura do projeto
 
 ```bash
-to-do-list/
+taski/
 ├── docs/
 ├── public/
 ├── src/
