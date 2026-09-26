@@ -91,4 +91,4 @@ taski/
 
 ## Encontrou algum problema?
 
-Abra uma [issue](https://github.com/lucasrochabz/to-do-list/issues) com sua sugestão ou crítica.
+Abra uma [issue](https://github.com/lucasrochabz/taski/issues) com sua sugestão ou crítica.
